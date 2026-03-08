@@ -1,23 +1,18 @@
-/* ============================================
-   style.css — WDD231 Course Home Page
-   Mobile-first + Media Queries incluidas
-   ============================================ */
 
-/* ---------- CSS Variables (Color Scheme) ---------- */
 :root {
-  --clr-bg:          #F4F1EC;       /* Warm ivory background */
-  --clr-surface:     #FFFFFF;       /* Card / surface white */
-  --clr-primary:     #1B3A4B;       /* Deep navy — main brand color */
-  --clr-accent:      #C9863A;       /* Warm amber accent */
-  --clr-accent-light:#F0D9BB;       /* Light amber tint for completed courses */
-  --clr-text:        #2C2C2C;       /* Near-black body text */
-  --clr-text-muted:  #6B6B6B;       /* Muted secondary text */
-  --clr-nav-bg:      #1B3A4B;       /* Nav background */
-  --clr-nav-text:    #F4F1EC;       /* Nav link text */
-  --clr-nav-active:  #C9863A;       /* Active nav link */
-  --clr-border:      #D8D0C4;       /* Card borders */
-  --clr-footer-bg:   #1B3A4B;       /* Footer background */
-  --clr-footer-text: #F4F1EC;       /* Footer text */
+  --clr-bg:          #F4F1EC;       
+  --clr-surface:     #FFFFFF;       
+  --clr-primary:     #1B3A4B;       
+  --clr-accent:      #C9863A;       
+  --clr-accent-light:#F0D9BB;       
+  --clr-text:        #2C2C2C;       
+  --clr-text-muted:  #6B6B6B;       
+  --clr-nav-bg:      #1B3A4B;       
+  --clr-nav-text:    #F4F1EC;       
+  --clr-nav-active:  #C9863A;       
+  --clr-border:      #D8D0C4;       
+  --clr-footer-bg:   #1B3A4B;       
+  --clr-footer-text: #F4F1EC;       
 
   --font-display:    'Playfair Display', Georgia, serif;
   --font-body:       'DM Sans', sans-serif;
@@ -27,7 +22,7 @@
   --transition:      0.25s ease;
 }
 
-/* ---------- Reset & Base ---------- */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -67,7 +62,7 @@ button {
   font-family: var(--font-body);
 }
 
-/* ---------- HEADER ---------- */
+
 header {
   background-color: var(--clr-surface);
   border-bottom: 2px solid var(--clr-border);
@@ -107,7 +102,7 @@ header {
   letter-spacing: 0.02em;
 }
 
-/* Hamburger button */
+
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -137,7 +132,7 @@ header {
   transition: transform var(--transition), opacity var(--transition);
 }
 
-/* Hamburger → X cuando está abierto */
+
 .hamburger[aria-expanded="true"] span:nth-child(1) {
   transform: translateY(7.5px) rotate(45deg);
 }
@@ -148,7 +143,7 @@ header {
   transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* ---------- NAVIGATION (pantalla pequeña) ---------- */
+
 nav#main-nav {
   background-color: var(--clr-nav-bg);
   max-height: 0;
@@ -190,7 +185,7 @@ nav#main-nav ul li a.active {
   background-color: rgba(201, 134, 58, 0.1);
 }
 
-/* ---------- MAIN ---------- */
+
 main {
   padding: 1.5rem 1.25rem;
   max-width: 1200px;
@@ -205,14 +200,14 @@ main h1 {
   letter-spacing: -0.02em;
 }
 
-/* Grid: 1 columna en móvil */
+
 .main-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
-/* ---------- CARDS ---------- */
+
 .card {
   background-color: var(--clr-surface);
   border: 1px solid var(--clr-border);
@@ -232,7 +227,7 @@ main h1 {
   padding: 0.6rem 1rem;
 }
 
-/* ---------- ABOUT SECTION ---------- */
+
 .about-section p {
   padding: 1rem;
   font-size: 0.97rem;
@@ -240,7 +235,7 @@ main h1 {
   line-height: 1.7;
 }
 
-/* ---------- PHOTO SECTION ---------- */
+
 .photo-wrapper {
   display: flex;
   justify-content: center;
@@ -258,7 +253,7 @@ main h1 {
   border: 2px solid var(--clr-border);
 }
 
-/* ---------- COURSES SECTION ---------- */
+
 .courses-section {
   grid-column: 1 / -1;
 }
@@ -303,7 +298,7 @@ main h1 {
   transform: scale(0.97);
 }
 
-/* Course list grid */
+
 .course-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -311,7 +306,7 @@ main h1 {
   padding: 0 1rem 0.75rem;
 }
 
-/* Course card individual (generado por JS) */
+
 .course-card {
   padding: 0.55rem 0.9rem;
   border-radius: var(--radius);
@@ -325,7 +320,7 @@ main h1 {
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
-/* Cursos completados con color de acento */
+
 .course-card.completed {
   background-color: var(--clr-accent-light);
   border-color: var(--clr-accent);
@@ -338,7 +333,7 @@ main h1 {
   box-shadow: 0 4px 12px rgba(201, 134, 58, 0.2);
 }
 
-/* Total de créditos */
+
 .credit-total {
   text-align: center;
   font-size: 0.85rem;
@@ -347,7 +342,7 @@ main h1 {
   font-style: italic;
 }
 
-/* ---------- FOOTER ---------- */
+
 footer {
   background-color: var(--clr-footer-bg);
   color: var(--clr-footer-text);
@@ -399,9 +394,7 @@ footer {
   opacity: 0.65;
 }
 
-/* ============================================
-   MEDIA QUERY — Tablet: 600px y arriba
-   ============================================ */
+
 @media (min-width: 600px) {
 
   .header-inner {
@@ -438,17 +431,15 @@ footer {
   }
 }
 
-/* ============================================
-   MEDIA QUERY — Desktop: 900px y arriba
-   ============================================ */
+
 @media (min-width: 900px) {
 
-  /* Ocultar hamburger en escritorio */
+  
   .hamburger {
     display: none;
   }
 
-  /* Nav horizontal */
+  
   nav#main-nav {
     max-height: none;
     overflow: visible;
@@ -494,7 +485,7 @@ footer {
     margin-bottom: 1.5rem;
   }
 
-  /* Grid 2 columnas: contenido | foto */
+  
   .main-grid {
     grid-template-columns: 1fr 320px;
     grid-template-rows: auto auto;
@@ -537,7 +528,7 @@ footer {
     width: 100%;
   }
 
-  /* Footer en fila */
+  
   footer {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -561,9 +552,7 @@ footer {
   }
 }
 
-/* ============================================
-   MEDIA QUERY — Wide Desktop: 1200px y arriba
-   ============================================ */
+
 @media (min-width: 1200px) {
 
   .header-inner {

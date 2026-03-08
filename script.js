@@ -41,66 +41,60 @@ if (lastModifiedEl) {
   lastModifiedEl.textContent = `Last Modification: ${document.lastModified}`;
 }
 
-/* ============================================================
-   3. CURSOS — Array, filtros, render y total de créditos
-
-   IMPORTANTE: Cambia "completed: false" a "completed: true"
-   en los cursos que ya hayas terminado.
-   ============================================================ */
 const courses = [
   {
     subject: 'CSE', number: 110,
     title: 'Introduction to Programming',
     credits: 2,
-    completed: true   // ← Cambia a false si no lo has terminado
+    completed: true   
   },
   {
     subject: 'WDD', number: 130,
     title: 'Web Fundamentals',
     credits: 2,
-    completed: true   // ← Cambia a false si no lo has terminado
+    completed: true   
   },
   {
     subject: 'CSE', number: 111,
     title: 'Programming with Functions',
     credits: 2,
-    completed: true   // ← Cambia a false si no lo has terminado
+    completed: true   
   },
   {
     subject: 'CSE', number: 210,
     title: 'Programming with Classes',
     credits: 2,
-    completed: false  // ← Cambia a true cuando lo termines
+    completed: false  
   },
   {
     subject: 'WDD', number: 131,
     title: 'Dynamic Web Fundamentals',
     credits: 2,
-    completed: true   // ← Cambia a false si no lo has terminado
+    completed: true   
   },
   {
     subject: 'WDD', number: 231,
     title: 'Frontend Web Development I',
     credits: 2,
-    completed: false  // ← Cambia a true cuando lo termines
+    completed: false  
   },
 ];
 
-// Referencias al DOM
+
 const courseList    = document.getElementById('course-list');
 const creditTotal   = document.getElementById('credit-total');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
-// Función que renderiza las tarjetas de cursos según el filtro
+
 function renderCourses(filter = 'all') {
   if (!courseList) return;
 
-  // Filtrar el array
+  
   const filtered = filter === 'all'
     ? courses
     : courses.filter(c => c.subject === filter);
 
-  // Generar tarjetas HTML
+  
   courseList.innerHTML = filtered
     .map(course => `
       <div class="course-card ${course.completed ? 'completed' : ''}"
@@ -110,14 +104,14 @@ function renderCourses(filter = 'all') {
     `)
     .join('');
 
-  // Total de créditos usando reduce()
+  
   const total = filtered.reduce((sum, c) => sum + c.credits, 0);
   if (creditTotal) {
     creditTotal.textContent = `The total credits for courses listed above is ${total}`;
   }
 }
 
-// Eventos de los botones de filtro
+
 filterButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     filterButtons.forEach(b => b.classList.remove('active'));
@@ -126,5 +120,5 @@ filterButtons.forEach(btn => {
   });
 });
 
-// Render inicial — mostrar todos los cursos al cargar
+
 renderCourses('all');
