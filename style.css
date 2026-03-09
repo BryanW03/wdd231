@@ -146,6 +146,7 @@ header {
 
 nav#main-nav {
   background-color: var(--clr-nav-bg);
+  color: var(--clr-nav-text); /* ✅ FIX: evita herencia de color: #2C2C2C del body */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s ease;
@@ -173,16 +174,16 @@ nav#main-nav ul li a {
 
 nav#main-nav ul li a:hover,
 nav#main-nav ul li a:focus-visible {
-  background-color: rgba(232, 165, 90, 0.15);
-  color: var(--clr-accent-nav);         /* ✅ FIX: era --clr-accent (#C9863A, ratio 3.97:1 ❌) */
+  background-color: rgba(255, 255, 255, 0.07); /* ✅ FIX: fondo neutro sobre nav oscuro */
+  color: var(--clr-accent-nav);
   padding-left: 2rem;
   outline: none;
 }
 
 nav#main-nav ul li a.active {
-  color: var(--clr-accent-nav);         /* ✅ #E8A55A sobre fondo oscuro — ratio ~5.2:1 */
+  color: var(--clr-accent-nav);
   border-left: 3px solid var(--clr-accent-nav);
-  background-color: rgba(255, 255, 255, 0.08); /* ✅ FIX: fondo neutro oscuro, sin conflicto de color */
+  /* ✅ FIX: sin background — el fondo es --clr-nav-bg (#1B3A4B), ratio con #E8A55A = ~5.2:1 */
 }
 
 
@@ -460,8 +461,8 @@ footer {
 
   nav#main-nav ul li a:hover,
   nav#main-nav ul li a:focus-visible {
-    background-color: rgba(232, 165, 90, 0.12);
-    color: var(--clr-accent-nav);       /* ✅ FIX: era --clr-accent (#C9863A, ratio 3.97:1 ❌) */
+    background-color: rgba(255, 255, 255, 0.07); /* ✅ FIX: fondo neutro que no conflictúa con el texto #E8A55A */
+    color: var(--clr-accent-nav);
     padding-left: 1.25rem;
     outline: none;
   }
