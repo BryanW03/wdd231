@@ -180,9 +180,9 @@ nav#main-nav ul li a:focus-visible {
 }
 
 nav#main-nav ul li a.active {
-  color: var(--clr-accent-nav);         /* ✅ FIX: era --clr-accent (#C9863A, ratio 3.97:1 ❌) */
+  color: var(--clr-accent-nav);         /* ✅ #E8A55A sobre fondo oscuro — ratio ~5.2:1 */
   border-left: 3px solid var(--clr-accent-nav);
-  background-color: rgba(232, 165, 90, 0.1);
+  background-color: rgba(255, 255, 255, 0.08); /* ✅ FIX: fondo neutro oscuro, sin conflicto de color */
 }
 
 
@@ -379,7 +379,7 @@ footer {
 .social-links svg {
   width: 20px;
   height: 20px;
-  fill: var(--clr-footer-text);
+  color: var(--clr-footer-text); /* ✅ FIX: 'fill' no es propiedad CSS válida; usar color + currentColor en el SVG */
 }
 
 .footer-info p,
