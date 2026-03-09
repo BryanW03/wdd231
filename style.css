@@ -380,7 +380,7 @@ footer {
 .social-links svg {
   width: 20px;
   height: 20px;
-  color: var(--clr-footer-text); /* ✅ FIX: 'fill' no es propiedad CSS válida; usar color + currentColor en el SVG */
+  /* color del SVG se controla con fill="currentColor" en el HTML */
 }
 
 .footer-info p,
