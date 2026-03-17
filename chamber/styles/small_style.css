@@ -71,8 +71,15 @@ a {
 }
 
 a:hover, a:focus {
-  color: var(--color-accent);
+  color: var(--color-primary);
   text-decoration: underline;
+}
+
+.page-banner a,
+#main-nav a,
+#main-header a,
+#main-footer a.social-link {
+  color: inherit;
 }
 
 .skip-link {
@@ -182,7 +189,6 @@ a:hover, a:focus {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  aria-label: "Toggle menu";
 }
 
 .hamburger-line {
@@ -217,7 +223,6 @@ a:hover, a:focus {
 
 #main-nav ul {
   list-style: none;
-  margin: 0;
   padding: var(--space-sm) 0;
   max-width: 1200px;
   margin: 0 auto;
@@ -277,11 +282,11 @@ a:hover, a:focus {
 }
 
 .page-banner h1 span {
-  color: var(--color-accent-light);
+  color: #f5d97a;
 }
 
 .page-banner p {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.9);
   font-size: 0.95rem;
   margin: 0;
 }
@@ -291,12 +296,12 @@ a:hover, a:focus {
   align-items: center;
   gap: var(--space-xs);
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.85);
   margin-bottom: var(--space-sm);
 }
 
 .breadcrumb a {
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.9);
 }
 
 .breadcrumb a:hover {
@@ -324,7 +329,7 @@ a:hover, a:focus {
 .controls-label {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--color-text-muted);
+  color: #5a6478;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: var(--space-xs);
@@ -418,6 +423,7 @@ a:hover, a:focus {
   border: 1px solid var(--color-border);
   transition: transform var(--transition), box-shadow var(--transition);
   position: relative;
+  animation: fadeInUp 0.4s ease both;
 }
 
 .member-card:hover {
@@ -449,9 +455,9 @@ a:hover, a:focus {
 }
 
 .badge-member {
-  background: rgba(13,59,110,0.1);
-  color: var(--color-primary);
-  border: 1px solid rgba(13,59,110,0.2);
+  background: #dce8f5;
+  color: #0d3b6e;
+  border: 1px solid #b0c8e0;
 }
 
 .card-image-wrap {
@@ -613,7 +619,7 @@ a:hover, a:focus {
 
 .member-count {
   font-size: 0.85rem;
-  color: var(--color-text-muted);
+  color: #5a6478;
 }
 
 .member-count strong {
@@ -792,8 +798,4 @@ body.dark-mode .page-banner {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.member-card {
-  animation: fadeInUp 0.4s ease both;
 }
