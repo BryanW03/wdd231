@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "name": "Banco Popular Dominicano",
+      "tagline": "Your financial partner for growth",
+      "address": "Av. John F. Kennedy 20, Santo Domingo Oeste",
+      "phone": "(809) 544-5000",
+      "website": "https://www.popularenlinea.com",
+      "image": "banco-popular.svg",
+      "membershipLevel": 3,
+      "description": "Leading financial institution serving the Dominican Republic since 1964."
+    },
+    {
+      "name": "Supermercados Nacional",
+      "tagline": "Fresh. Local. Affordable.",
+      "address": "Av. Independencia 300, Santo Domingo Oeste",
+      "phone": "(809) 560-1234",
+      "website": "https://www.nacional.com.do",
+      "image": "supermercado-nacional.svg",
+      "membershipLevel": 3,
+      "description": "Dominican supermarket chain offering the best local and imported products."
+    },
+    {
+      "name": "Hotel Lina & Casino",
+      "tagline": "Where business meets comfort",
+      "address": "Av. Máximo Gómez esq. 27 de Febrero",
+      "phone": "(809) 563-5000",
+      "website": "https://www.hotellina.com",
+      "image": "hotel-lina.svg",
+      "membershipLevel": 3,
+      "description": "Premier hotel and conference center in the heart of Santo Domingo."
+    },
+    {
+      "name": "Farmacia Carol",
+      "tagline": "Health and wellness for everyone",
+      "address": "Calle 27 de Febrero 45, Santo Domingo Oeste",
+      "phone": "(809) 531-9900",
+      "website": "https://www.farmaciacarol.com",
+      "image": "farmacia-carol.svg",
+      "membershipLevel": 2,
+      "description": "Trusted neighborhood pharmacy with over 30 years serving the community."
+    },
+    {
+      "name": "Constructora Herrera & Asociados",
+      "tagline": "Building the future today",
+      "address": "Calle Báez 12, Los Alcarrizos",
+      "phone": "(809) 520-7788",
+      "website": "https://www.herreraconstrucciones.com",
+      "image": "constructora-herrera.svg",
+      "membershipLevel": 2,
+      "description": "Leading construction firm specializing in residential and commercial projects."
+    },
+    {
+      "name": "Instituto Tecnológico del Oeste",
+      "tagline": "Education that transforms lives",
+      "address": "Av. Charles de Gaulle, Santo Domingo Oeste",
+      "phone": "(809) 537-1100",
+      "website": "https://www.itoes.edu.do",
+      "image": "instituto-tecnologico.svg",
+      "membershipLevel": 2,
+      "description": "Technical and vocational institute training the next generation of professionals."
+    },
+    {
+      "name": "Panadería y Repostería La Española",
+      "tagline": "Tradition baked with love",
+      "address": "Calle Principal 88, Villa Mella",
+      "phone": "(809) 528-4422",
+      "website": "https://www.panaderiaespanola.com",
+      "image": "panaderia-espanola.svg",
+      "membershipLevel": 1,
+      "description": "Family-owned bakery crafting traditional Dominican breads and pastries since 1985."
+    },
+    {
+      "name": "Auto Repuestos Díaz",
+      "tagline": "The right part, right price",
+      "address": "Av. Independencia 555, Santo Domingo Oeste",
+      "phone": "(809) 534-6677",
+      "website": "https://www.autorepuestodiaz.com",
+      "image": "auto-repuestos-diaz.svg",
+      "membershipLevel": 1,
+      "description": "Complete auto parts supplier for all makes and models. Fast service guaranteed."
+    }
+  ]
+}

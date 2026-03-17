@@ -1,0 +1,205 @@
+/* ===========================
+   SANTO DOMINGO OESTE CHAMBER
+   larger.css – Tablet & Desktop
+   =========================== */
+
+/* --- Tablet: 640px+ --- */
+@media (min-width: 640px) {
+  #main-header {
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  .logo-title {
+    font-size: 1.15rem;
+  }
+
+  .logo-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .page-banner {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  .page-banner h1 {
+    font-size: 2.2rem;
+  }
+
+  #main-content {
+    padding: var(--space-xl) var(--space-xl);
+  }
+
+  .directory-controls {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .controls-left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  #members-container.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    padding: var(--space-xl) var(--space-xl);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand {
+    flex: 1 1 200px;
+  }
+
+  .footer-nav {
+    flex: 0 1 160px;
+  }
+
+  .footer-info {
+    flex: 1 1 200px;
+  }
+
+  .footer-bottom {
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  .footer-bottom-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* --- Desktop: 900px+ --- */
+@media (min-width: 900px) {
+  /* Hide hamburger, show desktop nav */
+  #menu-toggle {
+    display: none;
+  }
+
+  #main-header {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .header-inner {
+    padding: var(--space-md) var(--space-xl);
+    width: 100%;
+  }
+
+  #main-nav {
+    background: var(--color-primary-dark);
+    max-height: none !important;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  #main-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 var(--space-xl);
+    gap: 0;
+  }
+
+  #main-nav ul li a {
+    padding: var(--space-sm) var(--space-md);
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    font-size: 0.88rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  #main-nav ul li a:hover,
+  #main-nav ul li a:focus,
+  #main-nav ul li a[aria-current="page"] {
+    border-left: none;
+    border-bottom-color: var(--color-accent);
+    background: rgba(255,255,255,0.04);
+  }
+
+  .logo-title {
+    font-size: 1.25rem;
+  }
+
+  .page-banner h1 {
+    font-size: 2.8rem;
+  }
+
+  .page-banner p {
+    font-size: 1.05rem;
+  }
+
+  #main-content {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  #members-container.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-image-wrap {
+    height: 160px;
+  }
+
+  /* List view desktop enhancements */
+  #members-container.list-view .member-card {
+    border-radius: var(--radius-md);
+  }
+
+  #members-container.list-view .card-body {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  #members-container.list-view .card-title {
+    min-width: 200px;
+    margin: 0;
+  }
+
+  #members-container.list-view .card-info {
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-lg);
+  }
+
+  #members-container.list-view .membership-badge {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .directory-controls {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer-top {
+    flex-wrap: nowrap;
+    gap: var(--space-2xl);
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  .footer-brand {
+    flex: 1.5;
+  }
+}
+
+/* --- Wide Desktop: 1200px+ --- */
+@media (min-width: 1200px) {
+  #members-container.grid-view {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .page-banner h1 {
+    font-size: 3.2rem;
+  }
+}
