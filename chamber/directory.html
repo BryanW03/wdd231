@@ -39,12 +39,7 @@
       </a>
 
       <div class="header-controls">
-        <button
-          id="dark-mode-toggle"
-          aria-label="Switch to dark mode"
-          title="Toggle dark mode">
-          🌙
-        </button>
+        <button id="dark-mode-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">🌙</button>
         <button
           id="menu-toggle"
           aria-label="Open navigation menu"
@@ -88,22 +83,14 @@
       <div class="controls-left">
         <span class="controls-label" id="view-label">View</span>
         <div class="view-toggle" role="group" aria-labelledby="view-label">
-          <button
-            id="btn-grid"
-            class="view-btn active"
-            aria-pressed="true"
-            title="Grid view">
+          <button id="btn-grid" class="view-btn active" aria-pressed="true" title="Grid view">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
               <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
             </svg>
             Grid
           </button>
-          <button
-            id="btn-list"
-            class="view-btn"
-            aria-pressed="false"
-            title="List view">
+          <button id="btn-list" class="view-btn" aria-pressed="false" title="List view">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <rect x="3" y="5" width="18" height="2"/><rect x="3" y="11" width="18" height="2"/>
               <rect x="3" y="17" width="18" height="2"/>
@@ -135,6 +122,237 @@
       class="grid-view"
       role="list"
       aria-label="Chamber member businesses">
+
+      <!-- =====================================================
+           TARJETAS DE MIEMBROS
+           Para cambiar la imagen de cada tarjeta,
+           edita el atributo src del <img> correspondiente.
+           Puedes usar una ruta local (images/foto.jpg)
+           o una URL externa (https://ejemplo.com/foto.jpg).
+
+           Niveles de membresía:
+             data-level="3"  →  Gold   (badge-gold)
+             data-level="2"  →  Silver (badge-silver)
+             data-level="1"  →  Member (badge-member)
+           ===================================================== -->
+
+      <!-- TARJETA: Banco Popular Dominicano -->
+      <article class="member-card" data-level="3" aria-label="Banco Popular Dominicano - Gold member">
+        <span class="membership-badge badge-gold" aria-label="Membership level: Gold">Gold</span>
+        <div class="card-image-wrap" aria-hidden="true">
+          <!-- Imagen Banco Popular: reemplaza el src con tu URL o ruta -->
+          <img
+            class="card-img"
+            src="images/banco-popular.jpg"
+            alt="Banco Popular Dominicano"
+            loading="lazy"
+            width="300"
+            height="160"
+            onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'card-img-placeholder\' aria-hidden=\'true\'>🏢</span>'"
+          >
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Banco Popular Dominicano</h2>
+          <p class="card-tagline">Tu banco de toda la vida</p>
+          <div class="card-info">
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+              <span>Av. Independencia 101, Santo Domingo Oeste</span>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              <a href="tel:+18092005000">(809) 200-5000</a>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              <a href="https://www.popularenlinea.com" target="_blank" rel="noopener noreferrer">popularenlinea.com</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TARJETA: Farmacia Carol -->
+      <article class="member-card" data-level="2" aria-label="Farmacia Carol - Silver member">
+        <span class="membership-badge badge-silver" aria-label="Membership level: Silver">Silver</span>
+        <div class="card-image-wrap" aria-hidden="true">
+          <!-- Imagen Farmacia Carol: reemplaza el src con tu URL o ruta -->
+          <img
+            class="card-img"
+            src="images/farmacia-carol.jpg"
+            alt="Farmacia Carol"
+            loading="lazy"
+            width="300"
+            height="160"
+            onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'card-img-placeholder\' aria-hidden=\'true\'>🏢</span>'"
+          >
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Farmacia Carol</h2>
+          <p class="card-tagline">Salud y bienestar para tu familia</p>
+          <div class="card-info">
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+              <span>Calle Principal 45, Santo Domingo Oeste</span>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              <a href="tel:+18095559876">(809) 555-9876</a>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              <a href="https://www.farmaciacarol.com" target="_blank" rel="noopener noreferrer">farmaciacarol.com</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TARJETA: Supermercados Bravo -->
+      <article class="member-card" data-level="3" aria-label="Supermercados Bravo - Gold member">
+        <span class="membership-badge badge-gold" aria-label="Membership level: Gold">Gold</span>
+        <div class="card-image-wrap" aria-hidden="true">
+          <!-- Imagen Supermercados Bravo: reemplaza el src con tu URL o ruta -->
+          <img
+            class="card-img"
+            src="images/supermercados-bravo.jpg"
+            alt="Supermercados Bravo"
+            loading="lazy"
+            width="300"
+            height="160"
+            onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'card-img-placeholder\' aria-hidden=\'true\'>🏢</span>'"
+          >
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Supermercados Bravo</h2>
+          <p class="card-tagline">Frescura y calidad en cada visita</p>
+          <div class="card-info">
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+              <span>Av. Prolongación 27 de Febrero, Santo Domingo Oeste</span>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              <a href="tel:+18095554321">(809) 555-4321</a>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              <a href="https://www.supermercadosbravo.com" target="_blank" rel="noopener noreferrer">supermercadosbravo.com</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TARJETA: Clínica Abreu -->
+      <article class="member-card" data-level="2" aria-label="Clínica Abreu - Silver member">
+        <span class="membership-badge badge-silver" aria-label="Membership level: Silver">Silver</span>
+        <div class="card-image-wrap" aria-hidden="true">
+          <!-- Imagen Clínica Abreu: reemplaza el src con tu URL o ruta -->
+          <img
+            class="card-img"
+            src="images/clinica-abreu.jpg"
+            alt="Clínica Abreu"
+            loading="lazy"
+            width="300"
+            height="160"
+            onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'card-img-placeholder\' aria-hidden=\'true\'>🏢</span>'"
+          >
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Clínica Abreu</h2>
+          <p class="card-tagline">Atención médica de excelencia</p>
+          <div class="card-info">
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+              <span>Calle Beller 42, Santo Domingo Oeste</span>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              <a href="tel:+18095556789">(809) 555-6789</a>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              <a href="https://www.clinicaabreu.com.do" target="_blank" rel="noopener noreferrer">clinicaabreu.com.do</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TARJETA: Ferretería Ochoa -->
+      <article class="member-card" data-level="1" aria-label="Ferretería Ochoa - Member">
+        <span class="membership-badge badge-member" aria-label="Membership level: Member">Member</span>
+        <div class="card-image-wrap" aria-hidden="true">
+          <!-- Imagen Ferretería Ochoa: reemplaza el src con tu URL o ruta -->
+          <img
+            class="card-img"
+            src="images/ferreteria-ochoa.jpg"
+            alt="Ferretería Ochoa"
+            loading="lazy"
+            width="300"
+            height="160"
+            onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'card-img-placeholder\' aria-hidden=\'true\'>🏢</span>'"
+          >
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Ferretería Ochoa</h2>
+          <p class="card-tagline">Todo para tu construcción y hogar</p>
+          <div class="card-info">
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+              <span>Av. San Martín 88, Santo Domingo Oeste</span>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              <a href="tel:+18095553344">(809) 555-3344</a>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              <a href="https://www.ferreteriaochoa.com" target="_blank" rel="noopener noreferrer">ferreteriaochoa.com</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TARJETA: Restaurante El Conuco -->
+      <article class="member-card" data-level="1" aria-label="Restaurante El Conuco - Member">
+        <span class="membership-badge badge-member" aria-label="Membership level: Member">Member</span>
+        <div class="card-image-wrap" aria-hidden="true">
+          <!-- Imagen Restaurante El Conuco: reemplaza el src con tu URL o ruta -->
+          <img
+            class="card-img"
+            src="images/restaurante-el-conuco.jpg"
+            alt="Restaurante El Conuco"
+            loading="lazy"
+            width="300"
+            height="160"
+            onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'card-img-placeholder\' aria-hidden=\'true\'>🏢</span>'"
+          >
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Restaurante El Conuco</h2>
+          <p class="card-tagline">Sabores auténticos dominicanos</p>
+          <div class="card-info">
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+              <span>Calle Casimiro de Moya 152, Santo Domingo Oeste</span>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              <a href="tel:+18095552211">(809) 555-2211</a>
+            </div>
+            <div class="card-info-row">
+              <svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              <a href="https://www.elconuco.com.do" target="_blank" rel="noopener noreferrer">elconuco.com.do</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- =====================================================
+           PARA AÑADIR UNA NUEVA TARJETA:
+           Copia un bloque <article> de arriba, pégalo aquí
+           y actualiza: data-level, src de la imagen,
+           nombre, tagline, dirección, teléfono y web.
+           ===================================================== -->
+
     </div>
 
   </main>
@@ -210,7 +428,7 @@
       </div>
     </div>
   </footer>
-  
+
   <script src="scripts/script.js"></script>
 </body>
 </html>
