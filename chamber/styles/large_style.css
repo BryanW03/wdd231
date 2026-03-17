@@ -1,9 +1,3 @@
-/* ===========================
-   SANTO DOMINGO OESTE CHAMBER
-   larger.css – Tablet & Desktop
-   =========================== */
-
-/* --- Tablet: 640px+ --- */
 @media (min-width: 640px) {
   #main-header {
     padding: var(--space-md) var(--space-xl);
@@ -75,9 +69,8 @@
   }
 }
 
-/* --- Desktop: 900px+ --- */
 @media (min-width: 900px) {
-  /* Hide hamburger, show desktop nav */
+  
   #menu-toggle {
     display: none;
   }
@@ -148,7 +141,7 @@
     height: 160px;
   }
 
-  /* List view desktop enhancements */
+  
   #members-container.list-view .member-card {
     border-radius: var(--radius-md);
   }
@@ -193,7 +186,6 @@
   }
 }
 
-/* --- Wide Desktop: 1200px+ --- */
 @media (min-width: 1200px) {
   #members-container.grid-view {
     grid-template-columns: repeat(4, 1fr);

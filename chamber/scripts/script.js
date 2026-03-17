@@ -1,33 +1,19 @@
-// ============================================
-// Santo Domingo Oeste Chamber of Commerce
-// directory.js - Member Directory Logic
-// ============================================
-
 const MEMBERSHIP_LABELS = {
   3: { label: 'Gold', badgeClass: 'badge-gold' },
   2: { label: 'Silver', badgeClass: 'badge-silver' },
   1: { label: 'Member', badgeClass: 'badge-member' },
 };
 
-const CATEGORY_ICONS = {
-  default: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>`,
-};
-
-// SVG icons for info rows
 const ICONS = {
   address: `<svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>`,
   phone:   `<svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>`,
   web:     `<svg class="card-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>`,
 };
 
-// State
 let allMembers = [];
 let currentView = 'grid';
 let currentFilter = 'all';
 
-// ========================
-// FETCH MEMBERS
-// ========================
 async function fetchMembers() {
   const container = document.getElementById('members-container');
   container.innerHTML = `
@@ -51,25 +37,19 @@ async function fetchMembers() {
   }
 }
 
-// ========================
-// RENDER DIRECTORY
-// ========================
 function renderDirectory() {
   const container = document.getElementById('members-container');
   const countEl = document.getElementById('member-count');
 
-  // Filter members
   let filtered = allMembers;
   if (currentFilter !== 'all') {
     filtered = allMembers.filter(m => m.membershipLevel === parseInt(currentFilter));
   }
 
-  // Update count
   if (countEl) {
     countEl.textContent = filtered.length;
   }
 
-  // Apply view class
   container.className = currentView === 'grid' ? 'grid-view' : 'list-view';
   container.setAttribute('id', 'members-container');
 
@@ -86,9 +66,6 @@ function renderDirectory() {
   });
 }
 
-// ========================
-// CREATE MEMBER CARD
-// ========================
 function createMemberCard(member, index) {
   const memberInfo = MEMBERSHIP_LABELS[member.membershipLevel] || MEMBERSHIP_LABELS[1];
   const animDelay = `animation-delay: ${index * 0.06}s`;
@@ -98,8 +75,11 @@ function createMemberCard(member, index) {
   article.setAttribute('style', animDelay);
   article.setAttribute('aria-label', `${member.name} - ${memberInfo.label} member`);
 
-  // Build image src path
-  const imgPath = `images/${member.image}`;
+  // Card image: use full URL if provided, otherwise fall back to local images/ folder
+  // Banco Popular: https://upload.wikimedia.org/wikipedia/commons/thumb/...
+  // Farmacia Carol: https://...
+  // To use an external image, set member.image to the full https:// URL in members.json
+  const imgSrc = member.image.startsWith('http') ? member.image : `images/${member.image}`;
 
   article.innerHTML = `
     <span class="membership-badge ${memberInfo.badgeClass}" aria-label="Membership level: ${memberInfo.label}">
@@ -109,7 +89,7 @@ function createMemberCard(member, index) {
     <div class="card-image-wrap" aria-hidden="true">
       <img
         class="card-img"
-        src="${imgPath}"
+        src="${imgSrc}"
         alt="${member.name} business photo"
         loading="lazy"
         width="300"
@@ -144,9 +124,6 @@ function createMemberCard(member, index) {
   return article;
 }
 
-// ========================
-// VIEW TOGGLE
-// ========================
 function setupViewToggle() {
   const gridBtn = document.getElementById('btn-grid');
   const listBtn = document.getElementById('btn-list');
@@ -172,9 +149,6 @@ function setupViewToggle() {
   });
 }
 
-// ========================
-// FILTER SETUP
-// ========================
 function setupFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
   filterBtns.forEach(btn => {
@@ -191,9 +165,6 @@ function setupFilters() {
   });
 }
 
-// ========================
-// HAMBURGER MENU
-// ========================
 function setupMobileMenu() {
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('main-nav');
@@ -205,7 +176,6 @@ function setupMobileMenu() {
     toggle.setAttribute('aria-expanded', isOpen.toString());
   });
 
-  // Close on outside click
   document.addEventListener('click', (e) => {
     if (!nav.contains(e.target) && !toggle.contains(e.target)) {
       nav.classList.remove('open');
@@ -214,9 +184,6 @@ function setupMobileMenu() {
   });
 }
 
-// ========================
-// DARK MODE TOGGLE
-// ========================
 function setupDarkMode() {
   const btn = document.getElementById('dark-mode-toggle');
   if (!btn) return;
@@ -236,9 +203,6 @@ function setupDarkMode() {
   });
 }
 
-// ========================
-// FOOTER: Date & Copyright
-// ========================
 function setupFooter() {
   const yearEl = document.getElementById('copyright-year');
   const modEl = document.getElementById('last-modified');
@@ -247,9 +211,6 @@ function setupFooter() {
   if (modEl) modEl.textContent = document.lastModified;
 }
 
-// ========================
-// UTILITIES
-// ========================
 function escapeHtml(str) {
   if (!str) return '';
   return str
@@ -264,9 +225,6 @@ function formatUrl(url) {
   return url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 }
 
-// ========================
-// INIT
-// ========================
 document.addEventListener('DOMContentLoaded', () => {
   setupDarkMode();
   setupMobileMenu();

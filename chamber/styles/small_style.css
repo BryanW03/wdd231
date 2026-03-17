@@ -1,20 +1,11 @@
-/* ===========================
-   SANTO DOMINGO OESTE CHAMBER
-   small.css – Mobile First
-   =========================== */
-
-/* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap');
-
-/* --- CSS Custom Properties --- */
 :root {
-  /* Color Palette – Deep Caribbean Blues with Gold Accents */
-  --color-primary: #0d3b6e;       /* Deep Navy */
+  
+  --color-primary: #0d3b6e;       
   --color-primary-dark: #081f3d;
-  --color-secondary: #1a6fa8;     /* Ocean Blue */
-  --color-accent: #c8a84b;        /* Dominican Gold */
+  --color-secondary: #1a6fa8;     
+  --color-accent: #c8a84b;        
   --color-accent-light: #e8c96a;
-  --color-bg: #f5f2ec;            /* Warm Parchment */
+  --color-bg: #f5f2ec;            
   --color-bg-card: #ffffff;
   --color-bg-dark: #0d1f35;
   --color-text: #1a1a2e;
@@ -23,11 +14,11 @@
   --color-border: #dde3ed;
   --color-gold-gradient: linear-gradient(135deg, #c8a84b 0%, #e8c96a 50%, #c8a84b 100%);
 
-  /* Typography */
+  
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
 
-  /* Spacing */
+  
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -35,21 +26,20 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
 
-  /* Borders */
+  
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
 
-  /* Shadows */
+  
   --shadow-sm: 0 1px 3px rgba(13,59,110,0.08), 0 1px 2px rgba(13,59,110,0.06);
   --shadow-md: 0 4px 12px rgba(13,59,110,0.12), 0 2px 6px rgba(13,59,110,0.08);
   --shadow-lg: 0 8px 24px rgba(13,59,110,0.16), 0 4px 12px rgba(13,59,110,0.1);
 
-  /* Transitions */
+  
   --transition: 0.25s ease;
 }
 
-/* --- Base Reset & Defaults --- */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -85,7 +75,6 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-/* --- Skip Link --- */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -101,9 +90,6 @@ a:hover, a:focus {
   top: 0;
 }
 
-/* ==============================
-   HEADER
-   ============================== */
 #main-header {
   background: var(--color-primary-dark);
   padding: var(--space-md) var(--space-md);
@@ -168,7 +154,6 @@ a:hover, a:focus {
   gap: var(--space-sm);
 }
 
-/* Dark mode toggle */
 #dark-mode-toggle {
   background: none;
   border: 1.5px solid rgba(200,168,75,0.4);
@@ -189,7 +174,6 @@ a:hover, a:focus {
   border-color: var(--color-accent);
 }
 
-/* Hamburger button */
 #menu-toggle {
   background: none;
   border: none;
@@ -220,9 +204,6 @@ a:hover, a:focus {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ==============================
-   NAVIGATION
-   ============================== */
 #main-nav {
   background: var(--color-primary);
   max-height: 0;
@@ -267,9 +248,6 @@ a:hover, a:focus {
   background: rgba(200,168,75,0.08);
 }
 
-/* ==============================
-   PAGE BANNER
-   ============================== */
 .page-banner {
   background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, var(--color-secondary) 100%);
   padding: var(--space-xl) var(--space-md);
@@ -325,18 +303,12 @@ a:hover, a:focus {
   color: var(--color-accent-light);
 }
 
-/* ==============================
-   MAIN CONTENT
-   ============================== */
 #main-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--space-xl) var(--space-md);
 }
 
-/* ==============================
-   DIRECTORY CONTROLS
-   ============================== */
 .directory-controls {
   display: flex;
   flex-direction: column;
@@ -428,9 +400,6 @@ a:hover, a:focus {
   color: var(--color-primary-dark);
 }
 
-/* ==============================
-   MEMBER CARDS – GRID VIEW
-   ============================== */
 #members-container {
   min-height: 200px;
 }
@@ -441,9 +410,6 @@ a:hover, a:focus {
   gap: var(--space-lg);
 }
 
-/* ==============================
-   MEMBER CARD
-   ============================== */
 .member-card {
   background: var(--color-bg-card);
   border-radius: var(--radius-lg);
@@ -563,9 +529,6 @@ a:hover, a:focus {
   word-break: break-word;
 }
 
-/* ==============================
-   LIST VIEW
-   ============================== */
 #members-container.list-view {
   display: flex;
   flex-direction: column;
@@ -615,9 +578,6 @@ a:hover, a:focus {
   align-self: flex-start;
 }
 
-/* ==============================
-   LOADING STATE
-   ============================== */
 .loading-state {
   display: flex;
   flex-direction: column;
@@ -641,9 +601,6 @@ a:hover, a:focus {
   to { transform: rotate(360deg); }
 }
 
-/* ==============================
-   MEMBER COUNT
-   ============================== */
 .directory-meta {
   display: flex;
   align-items: center;
@@ -664,9 +621,6 @@ a:hover, a:focus {
   font-weight: 700;
 }
 
-/* ==============================
-   FOOTER
-   ============================== */
 #main-footer {
   background: var(--color-bg-dark);
   color: rgba(255,255,255,0.8);
@@ -730,8 +684,8 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-.footer-nav h3,
-.footer-info h3 {
+.footer-nav h2,
+.footer-info h2 {
   font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 700;
@@ -784,9 +738,6 @@ a:hover, a:focus {
   display: block;
 }
 
-/* ==============================
-   DARK MODE
-   ============================== */
 body.dark-mode {
   --color-bg: #0d1520;
   --color-bg-card: #141f2e;
@@ -800,18 +751,38 @@ body.dark-mode .page-banner {
   background: linear-gradient(135deg, #060d18 0%, var(--color-primary-dark) 100%);
 }
 
-/* ==============================
-   ACCESSIBILITY
-   ============================== */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 3px;
 }
 
-/* ==============================
-   ANIMATIONS
-   ============================== */
+.footer-logo-group {
+  margin-bottom: 0.75rem;
+}
+
+.footer-logo-subtitle {
+  color: rgba(255,255,255,0.5);
+}
+
+.footer-membership-text {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+}
+
+.footer-gold {
+  color: var(--color-accent-light);
+}
+
+.footer-silver {
+  color: #c5cdd6;
+}
+
+.footer-member {
+  color: rgba(255,255,255,0.8);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
