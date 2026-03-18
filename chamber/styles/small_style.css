@@ -48,7 +48,10 @@
 
 .page-banner a,
 #main-nav a,
-#main-header a,
+#main-header a {
+  color: #ffffff;
+}
+
 #main-footer a.social-link {
   color: inherit;
 }
@@ -122,6 +125,7 @@
 .logo-subtitle {
   font-size: 0.65rem;
   color: var(--color-accent-light);
+  background-color: var(--color-primary-dark);
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -213,20 +217,19 @@
 
 #main-nav ul li a:hover,
 #main-nav ul li a:focus {
-  color: var(--color-accent-light);
-  background: rgba(255,255,255,0.06);
+  color: #ffffff;
+  background-color: var(--color-primary);
   border-left-color: var(--color-accent);
   text-decoration: none;
 }
 
 #main-nav ul li a[aria-current="page"] {
-  color: var(--color-accent-light);
+  color: #ffffff;
   border-left-color: var(--color-accent);
-  background: rgba(200,168,75,0.08);
+  background-color: var(--color-primary);
 }
 
 .page-banner {
-  background-color: #081f3d;
   background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, var(--color-secondary) 100%);
   padding: var(--space-xl) var(--space-md);
   text-align: center;
@@ -251,18 +254,15 @@
   font-size: 1.8rem;
   color: #ffffff;
   margin: 0 0 var(--space-xs);
-  background-color: #081f3d;
   line-height: 1.2;
 }
 
 .page-banner h1 span {
-  color: #ffffff;
-  background-color: #081f3d;
+  color: #fde68a;
 }
 
 .page-banner p {
   color: #ffffff;
-  background-color: #081f3d;
   font-size: 0.95rem;
   margin: 0;
 }
@@ -273,19 +273,15 @@
   gap: var(--space-xs);
   font-size: 0.8rem;
   color: #ffffff;
-  background-color: #081f3d;
   margin-bottom: var(--space-sm);
 }
 
 .breadcrumb a {
   color: #ffffff;
-  background-color: #081f3d;
 }
 
 .breadcrumb a:hover {
-  color: #ffffff;
-  background-color: #081f3d;
-  text-decoration: underline;
+  color: var(--color-accent-light);
 }
 
 #main-content {
@@ -698,6 +694,7 @@
 
 .footer-nav ul li a:hover {
   color: var(--color-accent-light);
+  background-color: var(--color-bg-dark);
   text-decoration: none;
 }
 
@@ -734,7 +731,6 @@ body.dark-mode {
 }
 
 body.dark-mode .page-banner {
-  background-color: #081f3d;
   background: linear-gradient(135deg, #060d18 0%, var(--color-primary-dark) 100%);
 }
 
