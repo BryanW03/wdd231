@@ -44,36 +44,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-body);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
-  min-width: 320px;
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: var(--color-secondary);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-
-a:hover, a:focus {
-  color: var(--color-primary);
-  text-decoration: underline;
-}
 
 .page-banner a,
 #main-nav a,
