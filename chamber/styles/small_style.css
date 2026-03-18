@@ -48,10 +48,7 @@
 
 .page-banner a,
 #main-nav a,
-#main-header a {
-  color: #ffffff;
-}
-
+#main-header a,
 #main-footer a.social-link {
   color: inherit;
 }
@@ -125,7 +122,6 @@
 .logo-subtitle {
   font-size: 0.65rem;
   color: var(--color-accent-light);
-  background-color: var(--color-primary-dark);
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -218,7 +214,7 @@
 #main-nav ul li a:hover,
 #main-nav ul li a:focus {
   color: #ffffff;
-  background-color: var(--color-primary);
+  background-color: #0d3b6e;
   border-left-color: var(--color-accent);
   text-decoration: none;
 }
@@ -226,7 +222,7 @@
 #main-nav ul li a[aria-current="page"] {
   color: #ffffff;
   border-left-color: var(--color-accent);
-  background-color: var(--color-primary);
+  background-color: #0d3b6e;
 }
 
 .page-banner {
@@ -253,12 +249,14 @@
   font-family: var(--font-display);
   font-size: 1.8rem;
   color: #ffffff;
+  background-color: #081f3d;
   margin: 0 0 var(--space-xs);
   line-height: 1.2;
 }
 
 .page-banner h1 span {
-  color: #fde68a;
+  color: #ffffff;
+  background-color: #081f3d;
 }
 
 .page-banner p {
@@ -653,9 +651,9 @@
   justify-content: center;
   width: 38px;
   height: 38px;
-  background: rgba(255,255,255,0.08);
+  background-color: #162d4a;
   border-radius: 50%;
-  color: rgba(255,255,255,0.7);
+  color: #ffffff;
   transition: background var(--transition), color var(--transition);
   font-size: 1rem;
 }
@@ -694,7 +692,6 @@
 
 .footer-nav ul li a:hover {
   color: var(--color-accent-light);
-  background-color: var(--color-bg-dark);
   text-decoration: none;
 }
 
