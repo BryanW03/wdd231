@@ -213,24 +213,26 @@
 
 #main-nav ul li a:hover,
 #main-nav ul li a:focus {
-  color: #ffffff;
-  background: rgba(255,255,255,0.10);
+  color: var(--color-accent-light);
+  background: rgba(255,255,255,0.06);
   border-left-color: var(--color-accent);
   text-decoration: none;
 }
 
 #main-nav ul li a[aria-current="page"] {
-  color: #ffffff;
+  color: var(--color-accent-light);
   border-left-color: var(--color-accent);
-  background: rgba(200,168,75,0.15);
+  background: rgba(200,168,75,0.08);
 }
 
 .page-banner {
+  background-color: var(--color-primary-dark);
   background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, var(--color-secondary) 100%);
   padding: var(--space-xl) var(--space-md);
   text-align: center;
   position: relative;
   overflow: hidden;
+  color: #ffffff;
 }
 
 .page-banner::before {
@@ -254,7 +256,7 @@
 }
 
 .page-banner h1 span {
-  color: #ffffff;
+  color: #fde68a;
 }
 
 .page-banner p {
@@ -269,12 +271,13 @@
   gap: var(--space-xs);
   font-size: 0.8rem;
   color: #ffffff;
-  background: transparent;
+  background-color: var(--color-primary-dark);
   margin-bottom: var(--space-sm);
 }
 
 .breadcrumb a {
   color: #ffffff;
+  background-color: var(--color-primary-dark);
 }
 
 .breadcrumb a:hover {
