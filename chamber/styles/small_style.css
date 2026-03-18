@@ -5,6 +5,7 @@
   --color-secondary: #1a6fa8;     
   --color-accent: #c8a84b;        
   --color-accent-light: #e8c96a;
+  --color-accent-text: #7a5f0a;   
   --color-bg: #f5f2ec;            
   --color-bg-card: #ffffff;
   --color-bg-dark: #0d1f35;
@@ -69,6 +70,7 @@
 
 #main-header {
   background: var(--color-primary-dark);
+  color: #ffffff;
   padding: var(--space-md) var(--space-md);
   position: sticky;
   top: 0;
@@ -252,11 +254,11 @@
 }
 
 .page-banner h1 span {
-  color: #f5d97a;
+  color: #fde68a;
 }
 
 .page-banner p {
-  color: rgba(255,255,255,0.9);
+  color: #ffffff;
   font-size: 0.95rem;
   margin: 0;
 }
@@ -266,12 +268,12 @@
   align-items: center;
   gap: var(--space-xs);
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.85);
+  color: #ffffff;
   margin-bottom: var(--space-sm);
 }
 
 .breadcrumb a {
-  color: rgba(255,255,255,0.9);
+  color: #ffffff;
 }
 
 .breadcrumb a:hover {
@@ -472,7 +474,7 @@
 
 .card-tagline {
   font-size: 0.8rem;
-  color: var(--color-text-muted);
+  color: #4a5568;
   margin: 0 0 var(--space-md);
   font-style: italic;
 }
@@ -495,7 +497,7 @@
   width: 16px;
   height: 16px;
   flex-shrink: 0;
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   margin-top: 1px;
 }
 

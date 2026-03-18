@@ -27,13 +27,13 @@ pre { font-family: monospace, monospace; font-size: 1em; }
 
 a {
   background-color: transparent;
-  color: var(--color-secondary);
+  color: var(--color-secondary, #155f94);
   text-decoration: none;
   transition: color var(--transition);
 }
 
 a:hover, a:focus {
-  color: var(--color-primary);
+  color: var(--color-primary, #0d3b6e);
   text-decoration: underline;
 }
 
