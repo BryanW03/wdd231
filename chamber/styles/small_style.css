@@ -282,16 +282,17 @@
   align-items: center;
   gap: var(--space-xs);
   font-size: 0.8rem;
-  color: var(--color-text-light); /* Corregido para contraste */
+  color: rgba(255,255,255,0.75);
   margin-bottom: var(--space-sm);
 }
 
 .breadcrumb a {
-  color: var(--color-primary); /* Corregido para contraste */
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .breadcrumb a:hover {
-  color: var(--color-secondary); /* Corregido para contraste */
+  color: var(--color-accent-light);
   text-decoration: underline;
 }
 
