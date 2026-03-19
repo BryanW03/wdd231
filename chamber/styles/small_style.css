@@ -48,7 +48,7 @@
 
 .page-banner a {
   color: #ffffff;
-  background-color: var(--color-primary-dark);
+  background-color: transparent;
 }
 
 #main-nav a {
