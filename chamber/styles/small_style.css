@@ -46,11 +46,24 @@
 }
 
 
-.page-banner a,
-#main-nav a,
-#main-header a,
+.page-banner a {
+  color: #ffffff;
+  background-color: #081f3d;
+}
+
+#main-nav a {
+  color: #ffffff;
+  background-color: #0d3b6e;
+}
+
+#main-header a {
+  color: #ffffff;
+  background-color: #081f3d;
+}
+
 #main-footer a.social-link {
-  color: inherit;
+  color: #ffffff;
+  background-color: #0d1f35;
 }
 
 .skip-link {
@@ -122,6 +135,7 @@
 .logo-subtitle {
   font-size: 0.65rem;
   color: var(--color-accent-light);
+  background-color: #081f3d;
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -213,14 +227,14 @@
 
 #main-nav ul li a:hover,
 #main-nav ul li a:focus {
-  color: var(--color-accent-light);
+  color: #ffffff;
   background-color: #0d3b6e;
   border-left-color: var(--color-accent);
   text-decoration: none;
 }
 
 #main-nav ul li a[aria-current="page"] {
-  color: var(--color-accent-light);
+  color: #ffffff;
   border-left-color: var(--color-accent);
   background-color: #0d3b6e;
 }
@@ -249,16 +263,19 @@
   font-family: var(--font-display);
   font-size: 1.8rem;
   color: #ffffff;
+  background-color: #081f3d;
   margin: 0 0 var(--space-xs);
   line-height: 1.2;
 }
 
 .page-banner h1 span {
-  color: #fde68a;
+  color: #ffffff;
+  background-color: #081f3d;
 }
 
 .page-banner p {
   color: #ffffff;
+  background-color: #081f3d;
   font-size: 0.95rem;
   margin: 0;
 }
@@ -269,15 +286,19 @@
   gap: var(--space-xs);
   font-size: 0.8rem;
   color: #ffffff;
+  background-color: #081f3d;
   margin-bottom: var(--space-sm);
 }
 
 .breadcrumb a {
   color: #ffffff;
+  background-color: #081f3d;
 }
 
 .breadcrumb a:hover {
-  color: var(--color-accent-light);
+  color: #ffffff;
+  background-color: #081f3d;
+  text-decoration: underline;
 }
 
 #main-content {
@@ -635,6 +656,7 @@
 
 .footer-contact a {
   color: var(--color-accent-light);
+  background-color: #0d1f35;
 }
 
 .footer-social {
@@ -649,9 +671,9 @@
   justify-content: center;
   width: 38px;
   height: 38px;
-  background: rgba(255,255,255,0.08);
+  background-color: #162d4a;
   border-radius: 50%;
-  color: rgba(255,255,255,0.7);
+  color: #ffffff;
   transition: background var(--transition), color var(--transition);
   font-size: 1rem;
 }
@@ -690,6 +712,7 @@
 
 .footer-nav ul li a:hover {
   color: var(--color-accent-light);
+  background-color: #0d1f35;
   text-decoration: none;
 }
 
@@ -751,6 +774,7 @@ body.dark-mode .page-banner {
 
 .footer-gold {
   color: var(--color-accent-light);
+  background-color: #0d1f35;
 }
 
 .footer-silver {
