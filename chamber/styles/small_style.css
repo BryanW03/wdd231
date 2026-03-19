@@ -1,4 +1,5 @@
 :root {
+  
   --color-primary: #0d3b6e;       
   --color-primary-dark: #081f3d;
   --color-secondary: #1a6fa8;     
@@ -14,9 +15,11 @@
   --color-border: #dde3ed;
   --color-gold-gradient: linear-gradient(135deg, #c8a84b 0%, #e8c96a 50%, #c8a84b 100%);
 
+  
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
 
+  
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -24,14 +27,17 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
 
+  
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
 
+  
   --shadow-sm: 0 1px 3px rgba(13,59,110,0.08), 0 1px 2px rgba(13,59,110,0.06);
   --shadow-md: 0 4px 12px rgba(13,59,110,0.12), 0 2px 6px rgba(13,59,110,0.08);
   --shadow-lg: 0 8px 24px rgba(13,59,110,0.16), 0 4px 12px rgba(13,59,110,0.1);
 
+  
   --transition: 0.25s ease;
 }
 
@@ -39,12 +45,10 @@
   box-sizing: border-box;
 }
 
+
 .page-banner a,
 #main-nav a,
-#main-header a {
-  color: #ffffff;
-}
-
+#main-header a,
 #main-footer a.social-link {
   color: inherit;
 }
@@ -93,7 +97,6 @@
 .logo-icon {
   width: 48px;
   height: 48px;
-  background: var(--color-accent); /* Fallback de accesibilidad */
   background: var(--color-gold-gradient);
   border-radius: var(--radius-md);
   display: flex;
@@ -119,7 +122,6 @@
 .logo-subtitle {
   font-size: 0.65rem;
   color: var(--color-accent-light);
-  background-color: var(--color-primary-dark);
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -212,7 +214,7 @@
 #main-nav ul li a:hover,
 #main-nav ul li a:focus {
   color: #ffffff;
-  background-color: var(--color-primary);
+  background-color: #0d3b6e;
   border-left-color: var(--color-accent);
   text-decoration: none;
 }
@@ -220,11 +222,10 @@
 #main-nav ul li a[aria-current="page"] {
   color: #ffffff;
   border-left-color: var(--color-accent);
-  background-color: var(--color-primary);
+  background-color: #0d3b6e;
 }
 
 .page-banner {
-  background: var(--color-primary-dark); /* Fallback de accesibilidad */
   background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, var(--color-secondary) 100%);
   padding: var(--space-xl) var(--space-md);
   text-align: center;
@@ -248,12 +249,14 @@
   font-family: var(--font-display);
   font-size: 1.8rem;
   color: #ffffff;
+  background-color: #081f3d;
   margin: 0 0 var(--space-xs);
   line-height: 1.2;
 }
 
 .page-banner h1 span {
-  color: #fde68a;
+  color: #ffffff;
+  background-color: #081f3d;
 }
 
 .page-banner p {
@@ -416,13 +419,11 @@
 }
 
 .badge-gold {
-  background: var(--color-accent); /* Fallback de accesibilidad */
   background: var(--color-gold-gradient);
   color: var(--color-primary-dark);
 }
 
 .badge-silver {
-  background: #c5cdd6; /* Fallback de accesibilidad */
   background: linear-gradient(135deg, #9ba5b2 0%, #c5cdd6 50%, #9ba5b2 100%);
   color: #1a2232;
 }
@@ -436,7 +437,6 @@
 .card-image-wrap {
   width: 100%;
   height: 140px;
-  background: var(--color-primary); /* Fallback de accesibilidad */
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   overflow: hidden;
   display: flex;
@@ -651,9 +651,9 @@
   justify-content: center;
   width: 38px;
   height: 38px;
-  background: rgba(255,255,255,0.08);
+  background-color: #162d4a;
   border-radius: 50%;
-  color: rgba(255,255,255,0.7);
+  color: #ffffff;
   transition: background var(--transition), color var(--transition);
   font-size: 1rem;
 }
@@ -692,7 +692,6 @@
 
 .footer-nav ul li a:hover {
   color: var(--color-accent-light);
-  background-color: var(--color-bg-dark);
   text-decoration: none;
 }
 
@@ -729,7 +728,6 @@ body.dark-mode {
 }
 
 body.dark-mode .page-banner {
-  background: var(--color-primary-dark); /* Fallback de accesibilidad */
   background: linear-gradient(135deg, #060d18 0%, var(--color-primary-dark) 100%);
 }
 
