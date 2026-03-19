@@ -282,17 +282,20 @@
   align-items: center;
   gap: var(--space-xs);
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.75);
+  color: #b8c8db;
+  background-color: var(--color-primary-dark);
   margin-bottom: var(--space-sm);
 }
 
 .breadcrumb a {
   color: #ffffff;
+  background-color: var(--color-primary-dark);
   text-decoration: underline;
 }
 
 .breadcrumb a:hover {
   color: var(--color-accent-light);
+  background-color: var(--color-primary-dark);
   text-decoration: underline;
 }
 
