@@ -289,6 +289,7 @@
 .breadcrumb a {
   color: #e8f0f8;
   text-decoration: none;
+  font-weight: 400;
 }
 
 .breadcrumb a:hover {
