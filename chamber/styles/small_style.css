@@ -280,16 +280,16 @@
   align-items: center;
   gap: var(--space-xs);
   font-size: 0.8rem;
-  color: #ffffff;
+  color: var(--color-text-light); /* Corregido para contraste */
   margin-bottom: var(--space-sm);
 }
 
 .breadcrumb a {
-  color: #ffffff;
+  color: var(--color-primary); /* Corregido para contraste */
 }
 
 .breadcrumb a:hover {
-  color: #ffffff;
+  color: var(--color-secondary); /* Corregido para contraste */
   text-decoration: underline;
 }
 
