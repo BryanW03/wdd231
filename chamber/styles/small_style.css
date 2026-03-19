@@ -263,16 +263,19 @@
   font-family: var(--font-display);
   font-size: 1.8rem;
   color: #ffffff;
+  background-color: #0d3b6e;
   margin: 0 0 var(--space-xs);
   line-height: 1.2;
 }
 
 .page-banner h1 span {
   color: #ffffff;
+  background-color: #0d3b6e;
 }
 
 .page-banner p {
   color: #ffffff;
+  background-color: #0d3b6e;
   font-size: 0.95rem;
   margin: 0;
 }
