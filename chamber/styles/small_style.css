@@ -48,7 +48,7 @@
 
 .page-banner a {
   color: #ffffff;
-  background-color: transparent;
+  background-color: #0d3b6e;
 }
 
 #main-nav a {
@@ -282,18 +282,24 @@
   align-items: center;
   gap: var(--space-xs);
   font-size: 0.8rem;
-  color: #c8d8e8;
+  color: #ffffff;
+  background-color: #0d3b6e;
+  padding: 0;
+  border-radius: 0;
   margin-bottom: var(--space-sm);
 }
 
 .breadcrumb a {
-  color: #e8f0f8;
+  color: #ffffff;
+  background-color: #0d3b6e;
   text-decoration: none;
   font-weight: 400;
+  padding: 0;
 }
 
 .breadcrumb a:hover {
   color: var(--color-accent-light);
+  background-color: #0d3b6e;
   text-decoration: underline;
 }
 
