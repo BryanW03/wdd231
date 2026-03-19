@@ -240,6 +240,7 @@
 }
 
 .page-banner {
+  background-color: #081f3d;
   background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, var(--color-secondary) 100%);
   padding: var(--space-xl) var(--space-md);
   text-align: center;
@@ -622,7 +623,8 @@
 
 #main-footer {
   background: var(--color-bg-dark);
-  color: rgba(255,255,255,0.8);
+  background-color: #0d1f35;
+  color: #c8d3e0;
   margin-top: var(--space-2xl);
 }
 
@@ -650,7 +652,7 @@
 .footer-contact p {
   margin: 0;
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.65);
+  color: #a0aec0;
   line-height: 1.6;
 }
 
@@ -706,7 +708,8 @@
 
 .footer-nav ul li a {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.6);
+  color: #a0aec0;
+  background-color: #0d1f35;
   transition: color var(--transition);
 }
 
@@ -732,7 +735,8 @@
 
 .footer-dev-info {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.4);
+  color: #6b7a8d;
+  background-color: #0d1f35;
 }
 
 .footer-dev-info span {
@@ -749,6 +753,7 @@ body.dark-mode {
 }
 
 body.dark-mode .page-banner {
+  background-color: #081f3d;
   background: linear-gradient(135deg, #060d18 0%, var(--color-primary-dark) 100%);
 }
 
@@ -763,12 +768,14 @@ body.dark-mode .page-banner {
 }
 
 .footer-logo-subtitle {
-  color: rgba(255,255,255,0.5);
+  color: #8896a7;
+  background-color: #0d1f35;
 }
 
 .footer-membership-text {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.6);
+  color: #a0aec0;
+  background-color: #0d1f35;
   line-height: 1.8;
 }
 
