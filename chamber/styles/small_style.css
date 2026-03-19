@@ -48,7 +48,6 @@
 
 .page-banner a {
   color: #ffffff;
-  background-color: #081f3d;
 }
 
 #main-nav a {
@@ -58,7 +57,6 @@
 
 #main-header a {
   color: #ffffff;
-  background-color: #081f3d;
 }
 
 #main-footer a.social-link {
@@ -263,19 +261,16 @@
   font-family: var(--font-display);
   font-size: 1.8rem;
   color: #ffffff;
-  background-color: #081f3d;
   margin: 0 0 var(--space-xs);
   line-height: 1.2;
 }
 
 .page-banner h1 span {
   color: #ffffff;
-  background-color: #081f3d;
 }
 
 .page-banner p {
   color: #ffffff;
-  background-color: #081f3d;
   font-size: 0.95rem;
   margin: 0;
 }
@@ -286,18 +281,15 @@
   gap: var(--space-xs);
   font-size: 0.8rem;
   color: #ffffff;
-  background-color: #081f3d;
   margin-bottom: var(--space-sm);
 }
 
 .breadcrumb a {
   color: #ffffff;
-  background-color: #081f3d;
 }
 
 .breadcrumb a:hover {
   color: #ffffff;
-  background-color: #081f3d;
   text-decoration: underline;
 }
 
