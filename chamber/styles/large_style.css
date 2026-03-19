@@ -115,8 +115,7 @@
   #main-nav ul li a[aria-current="page"] {
     border-left: none;
     border-bottom-color: var(--color-accent);
-    background: transparent;
-    color: #ffffff;
+    background: var(--color-primary);
   }
 
   .logo-title {
