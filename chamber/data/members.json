@@ -79,6 +79,16 @@
       "image": "auto-repuestos-diaz.svg",
       "membershipLevel": 1,
       "description": "Complete auto parts supplier for all makes and models. Fast service guaranteed."
+    },
+    {
+      "name": "Clínica Médica del Oeste",
+      "tagline": "Tu salud, nuestra prioridad",
+      "address": "Av. Charles de Gaulle 78, Santo Domingo Oeste",
+      "phone": "(809) 530-4400",
+      "website": "https://www.clinicadeloestesd.com",
+      "image": "clinica-del-oeste.svg",
+      "membershipLevel": 2,
+      "description": "Modern medical clinic offering primary care, specialty consultations, and diagnostic services for the entire family."
     }
   ]
 }
