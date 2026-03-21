@@ -1,16 +1,11 @@
-// home.js — Weather (OpenWeatherMap API) + Member Spotlights
-// Supports: index.html for Santo Domingo Oeste Chamber of Commerce
 
-// ── CONFIG ────────────────────────────────────────────────────────────────────
-// Get a free API key at https://openweathermap.org/api
-// Replace the string below with your key, then deploy.
 const OWM_API_KEY = 'YOUR_API_KEY_HERE';
 
-// Santo Domingo, Dominican Republic — city ID for OpenWeatherMap
-const OWM_CITY_ID = '3492897';
-const OWM_UNITS   = 'metric';   // Celsius
 
-// Unsplash photo map keyed by members.json image filenames
+const OWM_CITY_ID = '3492897';
+const OWM_UNITS   = 'metric';   
+
+
 const SPOTLIGHT_IMAGES = {
   'banco-popular.svg':         'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=600&q=80',
   'supermercado-nacional.svg': 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80',
@@ -23,7 +18,7 @@ const SPOTLIGHT_IMAGES = {
   'clinica-del-oeste.svg':     'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80',
 };
 
-// ── WEATHER ICON → EMOJI ──────────────────────────────────────────────────────
+
 function iconEmoji(code) {
   const map = {
     '01d':'☀️','01n':'🌙','02d':'⛅','02n':'🌤️',
@@ -35,7 +30,7 @@ function iconEmoji(code) {
   return map[code] || '🌡️';
 }
 
-// ── DEMO DATA (used when no API key is configured) ────────────────────────────
+
 function demoCurrentWeather() {
   return {
     temp: 31, feelsLike: 34, humidity: 75,
@@ -63,11 +58,11 @@ function demoForecast() {
   return days;
 }
 
-// ── RENDER CURRENT WEATHER ────────────────────────────────────────────────────
+
 function renderCurrentWeather(data) {
   const el = document.getElementById('weather-current');
   if (!el) return;
-  // Matches wireframe: icon, temp, condition, High/Low/Humidity/Sunrise/Sunset
+
   el.innerHTML = `
     <div class="weather-body">
       <div class="weather-main-row">
@@ -87,11 +82,11 @@ function renderCurrentWeather(data) {
     </div>`;
 }
 
-// ── RENDER FORECAST ───────────────────────────────────────────────────────────
+
 function renderForecast(days) {
   const el = document.getElementById('weather-forecast');
   if (!el) return;
-  // Matches wireframe: "Today: 90°F  Wednesday: 89°F  Thursday: 68°F" style list
+
   const rows = days.map(d => `
     <div class="forecast-row">
       <span class="forecast-day-name">${d.label}:</span>
@@ -102,7 +97,7 @@ function renderForecast(days) {
   el.innerHTML = `<div class="forecast-list">${rows}</div>`;
 }
 
-// ── FETCH CURRENT WEATHER ─────────────────────────────────────────────────────
+
 async function loadCurrentWeather() {
   if (OWM_API_KEY === 'YOUR_API_KEY_HERE') {
     renderCurrentWeather(demoCurrentWeather());
@@ -114,7 +109,7 @@ async function loadCurrentWeather() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const d    = await res.json();
 
-    // Format sunrise / sunset to readable time
+    
     const fmt = ts => new Date(ts * 1000).toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit', hour12:true });
 
     renderCurrentWeather({
@@ -123,7 +118,7 @@ async function loadCurrentWeather() {
       high:      Math.round(d.main.temp_max),
       low:       Math.round(d.main.temp_min),
       humidity:  d.main.humidity,
-      wind:      Math.round(d.wind.speed * 3.6),  // m/s → km/h
+      wind:      Math.round(d.wind.speed * 3.6),  
       sunrise:   fmt(d.sys.sunrise),
       sunset:    fmt(d.sys.sunset),
       desc:      d.weather[0].description.replace(/^\w/, c => c.toUpperCase()),
@@ -135,7 +130,7 @@ async function loadCurrentWeather() {
   }
 }
 
-// ── FETCH 3-DAY FORECAST ──────────────────────────────────────────────────────
+
 async function loadForecast() {
   if (OWM_API_KEY === 'YOUR_API_KEY_HERE') {
     renderForecast(demoForecast());
@@ -147,7 +142,7 @@ async function loadForecast() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
 
-    // Pick one reading per day (noon preferred), skip today
+   
     const today = new Date().toDateString();
     const seen  = new Map();
 
@@ -156,7 +151,7 @@ async function loadForecast() {
       const label = d.toDateString();
       if (label === today) continue;
       const hour  = d.getHours();
-      // Prefer hour closest to 12
+     
       if (!seen.has(label) || Math.abs(hour - 12) < Math.abs(new Date(seen.get(label).dt * 1000).getHours() - 12)) {
         seen.set(label, item);
       }
@@ -177,7 +172,7 @@ async function loadForecast() {
   }
 }
 
-// ── SPOTLIGHTS ────────────────────────────────────────────────────────────────
+
 async function loadSpotlights() {
   const container = document.getElementById('spotlights-container');
   if (!container) return;
@@ -186,13 +181,13 @@ async function loadSpotlights() {
     const res  = await fetch('data/members.json');
     const data = await res.json();
 
-    // Filter: only Gold (3) or Silver (2)
+
     const eligible = data.members.filter(m => m.membershipLevel >= 2);
 
-    // Shuffle randomly — different on every page load
+  
     const shuffled = eligible.sort(() => Math.random() - 0.5);
 
-    // Pick 2 or 3 randomly
+  
     const count    = Math.random() < 0.5 ? 2 : 3;
     const selected = shuffled.slice(0, Math.min(count, shuffled.length));
 
@@ -264,7 +259,7 @@ function buildSpotlightCard(member, index) {
   return card;
 }
 
-// ── INIT ──────────────────────────────────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', () => {
   loadCurrentWeather();
   loadForecast();
