@@ -92,7 +92,7 @@
   align-items: center;
   gap: var(--space-xs);
   background: var(--color-gold-gradient);
-  color: var(--color-primary-dark);
+  color: #0a1628; /* near-black — clearly distinct from gold, passes AA */
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 700;
@@ -110,7 +110,7 @@
   box-shadow: 0 8px 28px rgba(200,168,75,0.55);
   filter: brightness(1.07);
   text-decoration: none;
-  color: var(--color-primary-dark);
+  color: #0a1628;
 }
 
 /* ═══════════════════════════════════════════
@@ -231,7 +231,7 @@
 
 .event-meta {
   font-size: 0.73rem;
-  color: #4a5568; /* darker than text-muted — passes AA on white and light gold bg */
+  color: #1a202c; /* very dark — passes AA on both white and light gold bg */
   font-weight: 600;
   margin: 0 0 3px;
 }
@@ -271,15 +271,14 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  color: #ffffff; /* solid white — passes on dark weather panel bg */
+  color: var(--color-text); /* dark text — passes on light bg (forecast, spotlights) */
   font-size: 0.88rem;
   padding: var(--space-lg);
 }
 
-/* On light panels (forecast, spotlights) the loading text needs dark color */
-.panel-forecast .panel-loading,
-.spotlights-section .panel-loading {
-  color: var(--color-text); /* dark text on light bg */
+/* Weather panel is dark — override to white there */
+.panel-weather .panel-loading {
+  color: #ffffff;
 }
 
 /* Current weather content (injected by JS) */
