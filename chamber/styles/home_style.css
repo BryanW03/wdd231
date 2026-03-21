@@ -453,11 +453,7 @@
   z-index: 2;
 }
 
-.badge-gold  { background: var(--color-gold-gradient); color: var(--color-primary-dark); }
-.badge-silver {
-  background: linear-gradient(135deg, #9ba5b2 0%, #c5cdd6 50%, #9ba5b2 100%);
-  color: #1a2232;
-}
+/* .badge-gold and .badge-silver are defined in small_style.css — no duplication needed here */
 
 .spotlight-body {
   padding: var(--space-sm) var(--space-md);
