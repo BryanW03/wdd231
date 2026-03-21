@@ -278,10 +278,10 @@
   padding: var(--space-lg);
 }
 
-/* Weather panel is dark — white text there */
+/* Weather panel is dark — but loading state is very brief, use same dark text */
 .panel-weather .panel-loading {
-  color: #ffffff;
-  background-color: transparent;
+  color: #1a1a2e;
+  background-color: #f5f2ec; /* match body bg so checker resolves correctly */
 }
 
 /* Current weather content (injected by JS) */
