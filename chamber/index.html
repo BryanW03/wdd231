@@ -32,7 +32,6 @@
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
- 
   <header id="main-header">
     <div class="header-inner">
       <a href="index.html" class="logo-group" aria-label="Santo Domingo Oeste Chamber of Commerce - Home">
@@ -64,9 +63,12 @@
     </nav>
   </header>
 
- 
   <section class="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg" aria-hidden="true"></div>
+    <picture class="hero-picture">
+      <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=70&fm=webp">
+      <source media="(max-width: 900px)" srcset="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=70&fm=webp">
+      <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&q=70&fm=webp" alt="Santo Domingo city view" class="hero-img" width="1400" height="800">
+    </picture>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
       <p class="hero-eyebrow">Santo Domingo Oeste · República Dominicana</p>
@@ -84,16 +86,13 @@
     </div>
   </section>
 
- 
   <main id="main-content">
     <div class="home-wrapper">
 
-      
       <h2 class="home-section-label">Home</h2>
 
       <div class="info-row">
 
-     
         <section class="info-panel panel-events" aria-labelledby="events-heading">
           <h3 id="events-heading" class="panel-heading">Events</h3>
 
@@ -136,7 +135,6 @@
           <a href="events.html" class="panel-link">View all events →</a>
         </section>
 
-        
         <section class="info-panel panel-weather" aria-labelledby="weather-heading">
           <h3 id="weather-heading" class="panel-heading">Current Weather</h3>
           <div id="weather-current" aria-live="polite" aria-atomic="true">
@@ -147,7 +145,6 @@
           </div>
         </section>
 
-      
         <section class="info-panel panel-forecast" aria-labelledby="forecast-heading">
           <h3 id="forecast-heading" class="panel-heading">Weather Forecast</h3>
           <div id="weather-forecast" aria-live="polite" aria-atomic="true">
@@ -177,7 +174,6 @@
     </div>
   </main>
 
- 
   <footer id="main-footer">
     <div class="footer-top">
 
