@@ -215,7 +215,7 @@
         <div class="membership-cards-grid">
 
           <!-- NP Card -->
-          <article class="membership-card membership-card--np" style="animation-delay: 0.1s;">
+          <article class="membership-card membership-card--np card-delay-1">
             <div class="card-icon" aria-hidden="true">🤝</div>
             <div class="card-content">
               <h3 class="card-title">NP Membership</h3>
@@ -229,7 +229,7 @@
           </article>
 
           <!-- Bronze Card -->
-          <article class="membership-card membership-card--bronze" style="animation-delay: 0.2s;">
+          <article class="membership-card membership-card--bronze card-delay-2">
             <div class="card-icon" aria-hidden="true">🥉</div>
             <div class="card-content">
               <h3 class="card-title">Bronze</h3>
@@ -243,7 +243,7 @@
           </article>
 
           <!-- Silver Card -->
-          <article class="membership-card membership-card--silver" style="animation-delay: 0.3s;">
+          <article class="membership-card membership-card--silver card-delay-3">
             <div class="card-icon" aria-hidden="true">🥈</div>
             <div class="card-content">
               <h3 class="card-title">Silver</h3>
@@ -257,7 +257,7 @@
           </article>
 
           <!-- Gold Card -->
-          <article class="membership-card membership-card--gold" style="animation-delay: 0.4s;">
+          <article class="membership-card membership-card--gold card-delay-4">
             <div class="card-icon" aria-hidden="true">🥇</div>
             <div class="card-content">
               <h3 class="card-title">Gold</h3>
@@ -297,7 +297,7 @@
         <li>✅ Access to online business resources</li>
         <li>✅ Eligibility for community grant announcements</li>
       </ul>
-      <button class="modal-cta" onclick="document.getElementById('modal-np').close(); document.getElementById('membership-level').value='np';">Select This Plan</button>
+      <button class="modal-cta" data-select-level="np" data-close-modal="modal-np">Select This Plan</button>
     </div>
   </dialog>
 
@@ -321,7 +321,7 @@
         <li>✅ Social media shoutout on joining</li>
         <li>✅ Voting rights at annual meetings</li>
       </ul>
-      <button class="modal-cta modal-cta--bronze" onclick="document.getElementById('modal-bronze').close(); document.getElementById('membership-level').value='bronze';">Select This Plan</button>
+      <button class="modal-cta modal-cta--bronze" data-select-level="bronze" data-close-modal="modal-bronze">Select This Plan</button>
     </div>
   </dialog>
 
@@ -346,7 +346,7 @@
         <li>✅ Monthly digital advertising placement</li>
         <li>✅ Business profile featured in newsletter</li>
       </ul>
-      <button class="modal-cta modal-cta--silver" onclick="document.getElementById('modal-silver').close(); document.getElementById('membership-level').value='silver';">Select This Plan</button>
+      <button class="modal-cta modal-cta--silver" data-select-level="silver" data-close-modal="modal-silver">Select This Plan</button>
     </div>
   </dialog>
 
@@ -372,7 +372,7 @@
         <li>⭐ Exclusive invitation to VIP leadership roundtables</li>
         <li>⭐ Priority support from the chamber team</li>
       </ul>
-      <button class="modal-cta modal-cta--gold" onclick="document.getElementById('modal-gold').close(); document.getElementById('membership-level').value='gold';">Select This Plan</button>
+      <button class="modal-cta modal-cta--gold" data-select-level="gold" data-close-modal="modal-gold">Select This Plan</button>
     </div>
   </dialog>
 
