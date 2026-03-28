@@ -1,8 +1,5 @@
-Join style · CSS
-Copiar
-
 /* join_style.css */
- 
+
 /* ── LAYOUT ────────────────────────────────────────────────── */
 .join-wrapper {
   max-width: 1200px;
@@ -12,7 +9,7 @@ Copiar
   grid-template-columns: 1fr;
   gap: var(--space-2xl);
 }
- 
+
 /* ── FORM SECTION ──────────────────────────────────────────── */
 .form-section {
   background: var(--color-bg-card);
@@ -21,13 +18,13 @@ Copiar
   padding: var(--space-xl);
   box-shadow: var(--shadow-md);
 }
- 
+
 .form-header {
   margin-bottom: var(--space-xl);
   padding-bottom: var(--space-md);
   border-bottom: 3px solid var(--color-accent);
 }
- 
+
 .form-header h2 {
   font-family: var(--font-display);
   font-size: 1.6rem;
@@ -35,50 +32,49 @@ Copiar
   color: var(--color-primary);
   margin: 0 0 var(--space-xs);
 }
- 
+
 .form-header p {
   font-size: 0.92rem;
   color: var(--color-text-light);
   margin: 0;
   line-height: 1.6;
 }
- 
+
 /* Form grid: two columns on wider screens */
 #join-form {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-md);
 }
- 
+
 .form-field {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
- 
+
 .form-field--full {
   grid-column: 1 / -1;
 }
- 
+
 .field-label {
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-primary);
   letter-spacing: 0.02em;
 }
- 
+
 .required-mark {
   color: #c0392b;
   font-weight: 700;
 }
- 
+
 .field-hint {
   font-size: 0.75rem;
-  /* #4a5568 gives 7.0:1 on white — passes AA */
   color: #4a5568;
   margin-top: 2px;
 }
- 
+
 #join-form input[type="text"],
 #join-form input[type="email"],
 #join-form input[type="tel"],
@@ -95,7 +91,7 @@ Copiar
   transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
   outline: none;
 }
- 
+
 #join-form input[type="text"]:focus,
 #join-form input[type="email"]:focus,
 #join-form input[type="tel"]:focus,
@@ -105,21 +101,21 @@ Copiar
   box-shadow: 0 0 0 3px rgba(26,111,168,0.15);
   background: var(--color-bg-card);
 }
- 
+
 #join-form input:invalid:not(:placeholder-shown),
 #join-form select:invalid {
   border-color: #e74c3c;
 }
- 
+
 #join-form input:valid:not(:placeholder-shown) {
   border-color: #27ae60;
 }
- 
+
 #join-form textarea {
   resize: vertical;
   min-height: 110px;
 }
- 
+
 #join-form select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%230d3b6e' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
@@ -128,7 +124,7 @@ Copiar
   padding-right: 2.5rem;
   cursor: pointer;
 }
- 
+
 /* ── FORM FOOTER ───────────────────────────────────────────── */
 .form-footer {
   grid-column: 1 / -1;
@@ -141,13 +137,13 @@ Copiar
   padding-top: var(--space-md);
   border-top: 1px solid var(--color-border);
 }
- 
+
 .required-note {
   font-size: 0.8rem;
-  color: var(--color-text-muted);
+  color: #4a5568; /* Solución de contraste: oscurecido */
   margin: 0;
 }
- 
+
 .btn-submit {
   display: inline-flex;
   align-items: center;
@@ -166,20 +162,20 @@ Copiar
   box-shadow: 0 4px 18px rgba(13,59,110,0.3);
   transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
 }
- 
+
 .btn-submit:hover,
 .btn-submit:focus {
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(13,59,110,0.35);
   filter: brightness(1.1);
 }
- 
+
 /* ── MEMBERSHIP CARDS SECTION ──────────────────────────────── */
 .membership-cards-section {
   display: flex;
   flex-direction: column;
 }
- 
+
 .levels-heading {
   font-family: var(--font-display);
   font-size: 1.4rem;
@@ -190,20 +186,19 @@ Copiar
   border-bottom: 3px solid var(--color-accent);
   display: inline-block;
 }
- 
+
 .levels-subheading {
   font-size: 0.9rem;
-  /* #4a5568 gives sufficient contrast on the warm background #f5f2ec */
   color: #4a5568;
   margin: var(--space-xs) 0 var(--space-lg);
 }
- 
+
 .membership-cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
 }
- 
+
 /* ── CARD BASE ─────────────────────────────────────────────── */
 .membership-card {
   border-radius: var(--radius-lg);
@@ -219,13 +214,13 @@ Copiar
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   cursor: default;
- 
+
   /* ANIMATION: slide-in + fade on page load */
   opacity: 0;
   transform: translateY(30px);
   animation: cardReveal 0.55s ease forwards;
 }
- 
+
 @keyframes cardReveal {
   0% {
     opacity: 0;
@@ -240,7 +235,7 @@ Copiar
     transform: translateY(0) scale(1);
   }
 }
- 
+
 /* Decorative shimmer line at top */
 .membership-card::before {
   content: '';
@@ -251,14 +246,14 @@ Copiar
   height: 4px;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
- 
+
 .membership-card .card-icon {
   font-size: 2.4rem;
   line-height: 1;
   margin-bottom: var(--space-xs);
   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));
 }
- 
+
 .card-content {
   display: flex;
   flex-direction: column;
@@ -266,7 +261,7 @@ Copiar
   gap: 4px;
   width: 100%;
 }
- 
+
 .membership-card .card-title {
   font-family: var(--font-display);
   font-size: 1.05rem;
@@ -274,14 +269,14 @@ Copiar
   margin: 0;
   line-height: 1.2;
 }
- 
+
 .membership-card .card-subtitle {
   font-size: 0.75rem;
-  color: var(--color-text-muted);
+  color: #4a5568; /* Solución de contraste: oscurecido */
   margin: 0 0 var(--space-xs);
   font-style: italic;
 }
- 
+
 .card-price {
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -289,14 +284,14 @@ Copiar
   margin: 0 0 var(--space-sm);
   line-height: 1;
 }
- 
+
 .card-price span {
   font-size: 0.8rem;
   font-weight: 400;
   color: var(--color-text-muted);
   font-family: var(--font-body);
 }
- 
+
 .card-info-btn {
   display: inline-flex;
   align-items: center;
@@ -312,29 +307,28 @@ Copiar
   transition: background var(--transition), color var(--transition), transform var(--transition);
   letter-spacing: 0.02em;
 }
- 
+
 .card-info-btn:hover,
 .card-info-btn:focus {
   transform: translateY(-1px);
 }
- 
+
 /* ── ANIMATION DELAY CLASSES (replaces inline styles) ──────── */
 .card-delay-1 { animation-delay: 0.1s; }
 .card-delay-2 { animation-delay: 0.2s; }
 .card-delay-3 { animation-delay: 0.3s; }
 .card-delay-4 { animation-delay: 0.4s; }
- 
+
 /* ── NP CARD ────────────────────────────────────────────────── */
 .membership-card--np {
   border-color: #1a7a40;
 }
 .membership-card--np::before { background: #1a7a40; }
-/* Dark green #155f30 has 7.2:1 contrast on white — passes AAA */
 .membership-card--np .card-title { color: #155f30; }
 .membership-card--np .card-price { color: #155f30; }
 .membership-card--np .card-info-btn { color: #155f30; border-color: #1a7a40; }
 .membership-card--np .card-info-btn:hover { background: #1a7a40; color: #fff; }
- 
+
 /* ── BRONZE CARD ────────────────────────────────────────────── */
 .membership-card--bronze {
   border-color: #cd7f32;
@@ -346,7 +340,7 @@ Copiar
 .membership-card--bronze .card-price { color: #cd7f32; }
 .membership-card--bronze .card-info-btn { color: #8b4513; border-color: #cd7f32; }
 .membership-card--bronze .card-info-btn:hover { background: #cd7f32; color: #fff; }
- 
+
 /* ── SILVER CARD ────────────────────────────────────────────── */
 .membership-card--silver {
   border-color: #8e99a8;
@@ -359,7 +353,7 @@ Copiar
 .membership-card--silver .card-price { color: #5d6d7e; }
 .membership-card--silver .card-info-btn { color: #2c3e50; border-color: #8e99a8; }
 .membership-card--silver .card-info-btn:hover { background: #8e99a8; color: #fff; }
- 
+
 /* ── GOLD CARD ──────────────────────────────────────────────── */
 .membership-card--gold {
   border-color: var(--color-accent);
@@ -375,7 +369,7 @@ Copiar
   background: var(--color-gold-gradient);
   color: var(--color-primary-dark);
 }
- 
+
 /* ── MODALS ─────────────────────────────────────────────────── */
 .membership-modal {
   border: none;
@@ -388,17 +382,17 @@ Copiar
   color: var(--color-text);
   margin: auto;
 }
- 
+
 .membership-modal::backdrop {
   background: rgba(8,31,61,0.65);
   backdrop-filter: blur(3px);
 }
- 
+
 .modal-inner {
   padding: var(--space-xl);
   position: relative;
 }
- 
+
 .modal-close {
   position: absolute;
   top: var(--space-md);
@@ -416,12 +410,12 @@ Copiar
   color: var(--color-text-light);
   transition: background var(--transition), color var(--transition);
 }
- 
+
 .modal-close:hover {
   background: var(--color-border);
   color: var(--color-primary);
 }
- 
+
 .modal-header {
   display: flex;
   align-items: center;
@@ -430,13 +424,13 @@ Copiar
   padding-bottom: var(--space-md);
   border-bottom: 2px solid var(--color-border);
 }
- 
+
 .modal-icon {
   font-size: 2.8rem;
   line-height: 1;
   flex-shrink: 0;
 }
- 
+
 .modal-header h2 {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -444,18 +438,18 @@ Copiar
   margin: 0 0 4px;
   color: var(--color-primary);
 }
- 
+
 .modal-price {
   font-size: 0.88rem;
   color: var(--color-text-muted);
   margin: 0;
 }
- 
+
 .modal-header--gold h2 { color: var(--color-accent-text); }
 .modal-header--silver h2 { color: #2c3e50; }
 .modal-header--bronze h2 { color: #8b4513; }
 .modal-header--np h2 { color: #1e8449; }
- 
+
 .modal-benefits {
   list-style: none;
   padding: 0;
@@ -464,7 +458,7 @@ Copiar
   flex-direction: column;
   gap: var(--space-xs);
 }
- 
+
 .modal-benefits li {
   font-size: 0.9rem;
   color: var(--color-text);
@@ -472,11 +466,11 @@ Copiar
   border-bottom: 1px solid var(--color-border);
   line-height: 1.4;
 }
- 
+
 .modal-benefits li:last-child {
   border-bottom: none;
 }
- 
+
 .modal-cta {
   display: block;
   width: 100%;
@@ -493,36 +487,38 @@ Copiar
   transition: filter var(--transition), transform var(--transition), box-shadow var(--transition);
   box-shadow: 0 4px 14px rgba(13,59,110,0.25);
 }
- 
+
 .modal-cta:hover {
   filter: brightness(1.1);
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(13,59,110,0.3);
 }
- 
+
 .modal-cta--gold {
-  background: var(--color-gold-gradient);
+  background-color: #c8a84b; /* Solución de contraste: color de respaldo */
+  background-image: var(--color-gold-gradient);
   color: var(--color-primary-dark);
   box-shadow: 0 4px 14px rgba(200,168,75,0.3);
 }
- 
+
 .modal-cta--silver {
-  background: linear-gradient(135deg, #9ba5b2, #c5cdd6);
+  background-color: #9ba5b2; /* Solución de contraste: color de respaldo */
+  background-image: linear-gradient(135deg, #9ba5b2, #c5cdd6);
   color: #1a2232;
 }
- 
+
 .modal-cta--bronze {
-  background: linear-gradient(135deg, #cd7f32, #e8a96d);
-  /* dark text #3d1f00 gives >7:1 contrast on the bronze gradient */
+  background-color: #cd7f32; /* Solución de contraste: color de respaldo */
+  background-image: linear-gradient(135deg, #cd7f32, #e8a96d);
   color: #3d1f00;
 }
- 
+
 /* ── DARK MODE ──────────────────────────────────────────────── */
 body.dark-mode .form-section {
   background: var(--color-bg-card);
   border-color: var(--color-border);
 }
- 
+
 body.dark-mode #join-form input[type="text"],
 body.dark-mode #join-form input[type="email"],
 body.dark-mode #join-form input[type="tel"],
@@ -532,43 +528,43 @@ body.dark-mode #join-form textarea {
   color: var(--color-text);
   border-color: var(--color-border);
 }
- 
+
 body.dark-mode .membership-card {
   background: var(--color-bg-card);
 }
- 
+
 body.dark-mode .membership-modal {
   background: #141f2e;
   color: var(--color-text);
 }
- 
+
 body.dark-mode .modal-benefits li {
   color: var(--color-text);
   border-color: var(--color-border);
 }
- 
+
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
 @media (min-width: 640px) {
   #join-form {
     grid-template-columns: 1fr 1fr;
   }
- 
+
   .form-field--full {
     grid-column: 1 / -1;
   }
 }
- 
+
 @media (min-width: 900px) {
   .join-wrapper {
     grid-template-columns: 1fr 360px;
     align-items: start;
   }
- 
+
   .membership-cards-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
- 
+
 @media (min-width: 1100px) {
   .membership-cards-grid {
     grid-template-columns: 1fr 1fr;
