@@ -288,7 +288,7 @@
 .card-price span {
   font-size: 0.8rem;
   font-weight: 400;
-  color: var(--color-text-muted);
+  color: #4a5568; 
   font-family: var(--font-body);
 }
 
@@ -441,7 +441,7 @@
 
 .modal-price {
   font-size: 0.88rem;
-  color: var(--color-text-muted);
+  color: #4a5568; 
   margin: 0;
 }
 
