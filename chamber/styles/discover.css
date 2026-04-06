@@ -1,3 +1,4 @@
+
 /* discover_style.css */
 
 /* ── VISITOR BANNER ─────────────────────────────────────────── */
@@ -43,12 +44,11 @@
   display: inline-block;
 }
 
-/* ── GRID LAYOUT — SMALL (default, 1 column, stacked) ──────── */
+/* ── GRID LAYOUT — SMALL (default, 1 column) ──────────────── */
 #discover-grid {
   display: grid;
   gap: var(--space-md);
-
-  /* Named grid areas: small — single column, stacked */
+  grid-template-columns: 1fr;
   grid-template-areas:
     "p1"
     "p2"
@@ -58,16 +58,12 @@
     "p6"
     "p7"
     "p8";
-
-  grid-template-columns: 1fr;
 }
 
 /* ── GRID LAYOUT — MEDIUM (641px–1024px): 2-col asymmetric ─── */
 @media (min-width: 641px) and (max-width: 1024px) {
   #discover-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-
     grid-template-areas:
       "p1  p1"
       "p2  p3"
@@ -75,24 +71,12 @@
       "p6  p6"
       "p7  p8";
   }
-
-  /* Wide cards in medium view */
-  #discover-grid [style*="gridArea: p1"],
-  #discover-grid [style*="gridArea: p6"] {
-    flex-direction: row;
-  }
-  #discover-grid .discover-card:nth-child(1) .discover-figure,
-  #discover-grid .discover-card:nth-child(6) .discover-figure {
-    height: 200px;
-  }
 }
 
-/* ── GRID LAYOUT — LARGE (1025px+): magazine-style asymmetric  */
+/* ── GRID LAYOUT — LARGE (1025px+): magazine-style ─────────── */
 @media (min-width: 1025px) {
   #discover-grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-
     grid-template-areas:
       "p1  p1  p2  p3"
       "p4  p5  p6  p6"
@@ -145,7 +129,7 @@
   transition: transform 0.45s ease;
 }
 
-/* Hover effect — only on medium/large, NOT mobile */
+/* Image hover effect — MEDIUM and LARGE only, NOT mobile */
 @media (min-width: 641px) {
   .discover-card:hover .discover-img {
     transform: scale(1.08) rotate(0.5deg);
@@ -223,7 +207,7 @@
 .discover-btn:focus {
   background: var(--color-secondary);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(13,59,110,0.25);
+  box-shadow: 0 4px 12px rgba(13, 59, 110, 0.25);
   outline: none;
 }
 
@@ -232,9 +216,8 @@
   outline-offset: 2px;
 }
 
-/* ── WIDE CARD ADJUSTMENTS (large spans in grid) ────────────── */
+/* ── WIDE CARD ADJUSTMENTS (medium: 2-column spans) ─────────── */
 @media (min-width: 641px) {
-  /* Cards that span 2 columns get a side-by-side layout */
   .discover-card:nth-child(1),
   .discover-card:nth-child(6) {
     flex-direction: row;
@@ -253,8 +236,8 @@
   }
 }
 
+/* ── WIDE CARD ADJUSTMENTS (large: multi-column spans) ──────── */
 @media (min-width: 1025px) {
-  /* p1 spans 2 cols, p6 spans 2 cols, p8 spans 3 cols */
   .discover-card:nth-child(1) .discover-figure,
   .discover-card:nth-child(6) .discover-figure {
     width: 50%;

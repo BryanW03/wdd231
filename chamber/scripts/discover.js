@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   places.forEach((place, i) => {
     const card = document.createElement('article');
     card.className = 'discover-card';
+    card.setAttribute('role', 'listitem');
     card.style.gridArea = `p${i + 1}`;
 
     card.innerHTML = `
@@ -49,10 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
           onerror="this.src='https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80&fm=webp'">
       </figure>
       <div class="discover-body">
-        <h2 class="discover-name">${place.name}</h2>
+        <h3 class="discover-name">${place.name}</h3>
         <address class="discover-address">${place.address}</address>
         <p class="discover-desc">${place.description}</p>
-        <button class="discover-btn" aria-label="Learn more about ${place.name}">Learn More</button>
+        <button class="discover-btn" type="button" aria-label="Learn more about ${place.name}">Learn More</button>
       </div>`;
 
     grid.appendChild(card);
@@ -90,7 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (localStorage.getItem('darkMode') === 'enabled') {
     body.classList.add('dark-mode');
-    if (darkBtn) { darkBtn.textContent = '☀️'; darkBtn.setAttribute('aria-label', 'Switch to light mode'); }
+    if (darkBtn) {
+      darkBtn.textContent = '☀️';
+      darkBtn.setAttribute('aria-label', 'Switch to light mode');
+    }
   }
 
   if (darkBtn) {
