@@ -1,5 +1,4 @@
 // discover.js — Discover page logic
-import { places } from '../data/discover.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -28,44 +27,66 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem(STORAGE_KEY, String(now));
   }
 
-  // ── BUILD CARDS ─────────────────────────────────────────────
+  // ── BUILD CARDS USING FETCH AND JSON ────────────────────────
   const grid = document.getElementById('discover-grid');
-  if (!grid) return;
+  
+  async function getPlacesData() {
+    try {
+      const response = await fetch('data/discover.json');
+      if (response.ok) {
+        const data = await response.json();
+        displayPlaces(data);
+      } else {
+        console.error('Failed to fetch places data');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
 
-  places.forEach((place, i) => {
-    const card = document.createElement('article');
-    card.className = 'discover-card';
-    card.setAttribute('role', 'listitem');
-    card.style.gridArea = `p${i + 1}`;
+  function displayPlaces(places) {
+    if (!grid) return;
+    
+    places.forEach((place, i) => {
+      const card = document.createElement('article');
+      card.className = 'discover-card';
+      card.setAttribute('role', 'listitem');
+      card.style.gridArea = `p${i + 1}`;
 
-    card.innerHTML = `
-      <figure class="discover-figure">
-        <img
-          class="discover-img"
-          src="${place.imageUrl}"
-          alt="${place.alt}"
-          loading="lazy"
-          width="600"
-          height="200"
-          onerror="this.src='https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80&fm=webp'">
-      </figure>
-      <div class="discover-body">
-        <h3 class="discover-name">${place.name}</h3>
-        <address class="discover-address">${place.address}</address>
-        <p class="discover-desc">${place.description}</p>
-        <button class="discover-btn" type="button" aria-label="Learn more about ${place.name}">Learn More</button>
-      </div>`;
+      card.innerHTML = `
+        <figure class="discover-figure">
+          <img
+            class="discover-img"
+            src="${place.imageUrl}"
+            alt="${place.alt}"
+            loading="lazy"
+            width="600"
+            height="200"
+            onerror="this.src='https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80&fm=webp'">
+        </figure>
+        <div class="discover-body">
+          <h3 class="discover-name">${place.name}</h3>
+          <address class="discover-address">${place.address}</address>
+          <p class="discover-desc">${place.description}</p>
+          <button class="discover-btn" type="button" aria-label="Learn more about ${place.name}">Learn More</button>
+        </div>`;
 
-    grid.appendChild(card);
-  });
+      grid.appendChild(card);
+    });
+  }
+
+  // Ejecutar el fetch al cargar
+  getPlacesData();
 
   // ── LEARN MORE BUTTONS ───────────────────────────────────────
-  grid.addEventListener('click', (e) => {
-    if (e.target.classList.contains('discover-btn')) {
-      const name = e.target.closest('.discover-card').querySelector('.discover-name').textContent;
-      alert(`Coming soon: Full details about ${name}!`);
-    }
-  });
+  if (grid) {
+    grid.addEventListener('click', (e) => {
+      if (e.target.classList.contains('discover-btn')) {
+        const name = e.target.closest('.discover-card').querySelector('.discover-name').textContent;
+        alert(`Coming soon: Full details about ${name}!`);
+      }
+    });
+  }
 
   // ── SHARED: COPYRIGHT & LAST MODIFIED ───────────────────────
   const yearEl = document.getElementById('copyright-year');
