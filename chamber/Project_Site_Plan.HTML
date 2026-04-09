@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site plan for Dominican Power 2026 – a dynamic WBC roster and performance tracker for the Dominican Republic National Team.">
+  <meta name="author" content="Your Name">
+  <title>Dominican Power 2026 – Site Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dr-blue:   #002D62;
+      --dr-red:    #CE1126;
+      --dr-white:  #FFFFFF;
+      --dr-gold:   #D4AF37;
+      --dr-light:  #F0F4FA;
+      --dr-dark:   #0A0A0A;
+      --dr-mid:    #1A3A6B;
+      --dr-border: #BFD0E8;
+      --font-heading: 'Oswald', sans-serif;
+      --font-body:    'Source Sans 3', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--dr-light);
+      color: var(--dr-dark);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    header {
+      background-color: var(--dr-blue);
+      color: var(--dr-white);
+      overflow: hidden;
+    }
+
+    .header-stripe-top { height: 8px; background-color: var(--dr-red); }
+
+    .header-inner {
+      padding: 2rem 2rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: var(--font-heading);
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--dr-white);
+      text-transform: uppercase;
+    }
+
+    header h1 span { color: var(--dr-gold); }
+
+    header p {
+      font-size: 0.95rem;
+      margin-top: 0.4rem;
+      color: #9DB8E0;
+    }
+
+    .header-stripe-bottom {
+      height: 6px;
+      background: linear-gradient(90deg, var(--dr-red) 50%, var(--dr-blue) 50%);
+    }
+
+    nav {
+      background-color: var(--dr-mid);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      padding: 0.6rem 1rem;
+      border-bottom: 3px solid var(--dr-gold);
+    }
+
+    nav a {
+      color: #9DB8E0;
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 0.3rem 0.85rem;
+      border-radius: 3px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    nav a:hover {
+      background-color: var(--dr-red);
+      color: var(--dr-white);
+    }
+
+    main {
+      max-width: 920px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    section {
+      background-color: var(--dr-white);
+      border: 1px solid var(--dr-border);
+      border-top: 4px solid var(--dr-blue);
+      border-radius: 6px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 2rem;
+    }
+
+    section.red-accent   { border-top-color: var(--dr-red); }
+    section.gold-accent  { border-top-color: var(--dr-gold); }
+
+    section h2 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--dr-blue);
+      border-bottom: 2px solid var(--dr-border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    section.red-accent h2  { color: var(--dr-red); }
+    section.gold-accent h2 { color: #7A5E00; }
+
+    section p { margin-bottom: 0.75rem; }
+
+    .domain {
+      font-size: 0.88rem;
+      color: #555;
+      font-style: italic;
+      margin-top: 0.25rem;
+    }
+
+    ul { padding-left: 1.5rem; margin-top: 0.5rem; }
+    ul li { margin-bottom: 0.5rem; }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--dr-blue);
+      color: var(--dr-white);
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .badge.red  { background-color: var(--dr-red); }
+    .badge.gold { background-color: var(--dr-gold); color: #3D2800; }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .color-card {
+      border: 1px solid var(--dr-border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .color-preview { height: 56px; }
+
+    .color-info { padding: 0.75rem 0.9rem; }
+
+    .color-info strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--dr-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .color-info span {
+      font-size: 0.8rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .font-sample {
+      margin-top: 1rem;
+      border: 1px solid var(--dr-border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .font-sample-bar {
+      background-color: var(--dr-blue);
+      color: var(--dr-gold);
+      padding: 0.6rem 1rem;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .font-sample-content {
+      padding: 1rem;
+      background-color: #F8FAFF;
+    }
+
+    .font-sample-h {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--dr-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.4rem;
+    }
+
+    .font-sample-b {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--dr-dark);
+      line-height: 1.7;
+    }
+
+    .wireframes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+
+    .wireframe-wrap { text-align: center; }
+
+    .wireframe-wrap h3 {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--dr-blue);
+      margin-bottom: 0.75rem;
+    }
+
+    .wf {
+      border: 2px solid var(--dr-blue);
+      border-radius: 6px;
+      background-color: #F8FAFF;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .wf-mobile  { width: 170px; }
+    .wf-desktop { width: 380px; }
+
+    .wb {
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 5px 4px;
+      text-align: center;
+    }
+
+    .wb-header  { background-color: var(--dr-blue); color: var(--dr-white); height: 36px; }
+    .wb-nav     { background-color: var(--dr-mid);  color: #9DB8E0;         height: 24px; }
+    .wb-hero    { background-color: var(--dr-red);  color: var(--dr-white); height: 72px; }
+    .wb-gold    { background-color: var(--dr-gold); color: #3D2800;         height: 30px; }
+    .wb-card    { background-color: var(--dr-border); color: var(--dr-blue); flex: 1; height: 58px; }
+    .wb-section { background-color: #D0DCF0; color: var(--dr-blue);         height: 48px; }
+    .wb-footer  { background-color: var(--dr-dark); color: #9DB8E0;         height: 26px; }
+    .wb-row     { display: flex; gap: 6px; }
+
+    .scenario-item {
+      background-color: #F0F4FA;
+      border-left: 4px solid var(--dr-red);
+      border-radius: 0 4px 4px 0;
+      padding: 0.6rem 1rem;
+      margin-bottom: 0.75rem;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--dr-dark);
+    }
+
+    footer {
+      background-color: var(--dr-blue);
+      color: #9DB8E0;
+      text-align: center;
+      padding: 1.25rem;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-top: 4px solid var(--dr-red);
+    }
+
+    footer span { color: var(--dr-gold); }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      section { padding: 1.25rem 1rem; }
+      .wf-desktop { width: 100%; max-width: 340px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-stripe-top"></div>
+  <div class="header-inner">
+    <h1>Dominican <span>Power</span> 2026</h1>
+    <p>WDD 231 – Individual Website Project Site Plan &nbsp;|&nbsp; The Dream Team Journey</p>
+  </div>
+  <div class="header-stripe-bottom"></div>
+</header>
+
+<nav>
+  <a href="#site-name">Site Name</a>
+  <a href="#purpose">Purpose</a>
+  <a href="#scenarios">Scenarios</a>
+  <a href="#colors">Colors</a>
+  <a href="#typography">Typography</a>
+  <a href="#wireframe">Wireframe</a>
+</nav>
+
+<main>
+
+  <section id="site-name">
+    <h2>Site Name</h2>
+    <p>
+      <span class="badge">Name</span> <strong>Dominican Power 2026 – The Dream Team Journey</strong>
+    </p>
+    <p>
+      "Dominican Power" fuses the fierce national identity of the Dominican Republic with a declaration of athletic dominance — the same energy that fans feel when the Quisqueya flag fills the stadium. "2026" anchors the site to the historic World Baseball Classic edition, and "The Dream Team Journey" frames the narrative arc of the entire project: this was not just a tournament, it was a generation-defining moment for Dominican baseball.
+    </p>
+    <p class="domain">Optional domain: dominicanpower2026.com</p>
+  </section>
+
+  <section id="purpose" class="red-accent">
+    <h2>Site Purpose</h2>
+    <p>
+      Dominican Power 2026 is a high-performance digital roster and analytics platform dedicated to the Dominican Republic National Team at the 2026 World Baseball Classic. The site serves as both a fan tribute and a data hub, providing:
+    </p>
+    <ul>
+      <li>A dynamic landing page celebrating the historic 2026 squad with a full tournament recap and spotlight on the team's "Big Three" hitters.</li>
+      <li>A fully data-driven roster directory featuring 15+ player cards generated from a local JSON file, each displaying batting average or ERA, MLB team affiliation, player photo, and lineup role.</li>
+      <li>A Game Day Analytics page where users can explore specific matchups via accessible modal dialogs showing box scores, the Player of the Game, and the key turning point of each match.</li>
+      <li>A "My Starting Nine" feature powered by Local Storage, allowing fans to build and persist their own custom dream lineup across browser sessions.</li>
+    </ul>
+  </section>
+
+  <section id="scenarios">
+    <h2>Scenarios</h2>
+    <p>These questions represent the typical visitor to Dominican Power 2026 — passionate fans, baseball analysts, and WBC followers:</p>
+
+    <div class="scenario-item">Who were the starting pitchers for the Dominican Republic in their semifinal matchup, and what were their tournament stats?</div>
+    <div class="scenario-item">Which players on the 2026 roster had a batting average above .300 during the WBC, and what positions did they play?</div>
+    <div class="scenario-item">How can I build and save my own Dream Starting Nine from the Dominican roster to share with friends?</div>
+    <div class="scenario-item">What happened in the DR vs. USA game — who was the Player of the Game and what was the turning point of the match?</div>
+  </section>
+
+  <section id="colors" class="gold-accent">
+    <h2>Color Scheme</h2>
+    <p>
+      The palette is drawn directly from the Dominican Republic national flag — deep blue, bold red, and clean white — enriched with a championship gold accent that evokes prestige and the WBC trophy.
+    </p>
+
+    <div class="color-grid">
+
+      <div class="color-card">
+        <div class="color-preview" style="background-color: #002D62;"></div>
+        <div class="color-info">
+          <strong>Dominican Blue &nbsp;#002D62</strong>
+          <span>Primary brand color. Used for the header background, section top borders, heading text, nav bar, and footer. Establishes authority and national identity.</span>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-preview" style="background-color: #CE1126;"></div>
+        <div class="color-info">
+          <strong>Dominican Red &nbsp;#CE1126</strong>
+          <span>Action and energy color. Used for the hero section, call-to-action buttons, left-border scenario accents, section top borders on key pages, and the footer top stripe.</span>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-preview" style="background-color: #D4AF37; border: 1px solid #ccc;"></div>
+        <div class="color-info">
+          <strong>Championship Gold &nbsp;#D4AF37</strong>
+          <span>Prestige accent. Used for the site name highlight in the header, nav bottom border, "Big Three" player card borders, badge labels, and key stat highlights.</span>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-preview" style="background-color: #F0F4FA; border: 1px solid #ccc;"></div>
+        <div class="color-info">
+          <strong>Ice Blue &nbsp;#F0F4FA</strong>
+          <span>Page background. A cool near-white derived from the blue family. Used as the body background and secondary card surfaces for a clean, fresh feel.</span>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-preview" style="background-color: #FFFFFF; border: 1px solid #ccc;"></div>
+        <div class="color-info">
+          <strong>White &nbsp;#FFFFFF</strong>
+          <span>Content surface color. Used as the background for all section cards, player cards, and modal dialogs. Represents the white cross at the center of the Dominican flag.</span>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-preview" style="background-color: #0A0A0A;"></div>
+        <div class="color-info">
+          <strong>Near Black &nbsp;#0A0A0A</strong>
+          <span>Body text and footer background. Ensures maximum contrast and readability across all content areas.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="typography">
+    <h2>Typography</h2>
+    <p>
+      Two Google Fonts are selected to balance athletic boldness with editorial clarity, reflecting the dual nature of the site as both a fan tribute and a data-driven platform.
+    </p>
+    <ul>
+      <li>
+        <strong>Oswald (Bold 700 / Regular 400)</strong> — Used for all headings (h1–h3), the site title, navigation links, player card names, stat labels, and button text. Its condensed, impactful letterforms feel native to sports branding and stadium signage. Applied throughout this site plan document.
+      </li>
+      <li>
+        <strong>Source Sans 3 (Regular 400 / SemiBold 600)</strong> — Used for all body copy, player card descriptions, scenario text, modal dialog content, and form labels. Its clean humanist design ensures excellent readability at small sizes across mobile and desktop, especially in data-heavy layouts. Applied to all paragraph text in this document.
+      </li>
+    </ul>
+
+    <div class="font-sample">
+      <div class="font-sample-bar">Typography Preview</div>
+      <div class="font-sample-content">
+        <p class="font-sample-h">Juan Soto – Left Fielder · .412 AVG</p>
+        <p class="font-sample-b">
+          Representing the New York Yankees in the 2026 WBC, Soto delivered a tournament-defining performance that cemented his legacy as the most feared hitter in Dominican baseball history. Oswald headline above — Source Sans 3 body text below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="wireframe">
+    <h2>Wireframe – Home Page</h2>
+    <p>
+      The wireframes below represent the layout of <code>index.html</code> at mobile (~375px) and desktop (~1200px) viewports. Each block represents a distinct content region.
+    </p>
+
+    <div class="wireframes">
+
+      <div class="wireframe-wrap">
+        <h3>Mobile View (~375px)</h3>
+        <div class="wf wf-mobile">
+          <div class="wb wb-header">Header / Logo</div>
+          <div class="wb wb-nav">Nav (Hamburger)</div>
+          <div class="wb wb-hero">Hero – Flag Colors + Team Name + Tagline</div>
+          <div class="wb wb-gold">Tournament Recap Banner</div>
+          <div class="wb wb-section">Project Intro – Historic Significance</div>
+          <div class="wb wb-card">Big Three Card – Player 1</div>
+          <div class="wb wb-card">Big Three Card – Player 2</div>
+          <div class="wb wb-card">Big Three Card – Player 3</div>
+          <div class="wb wb-gold">My Starting Nine CTA</div>
+          <div class="wb wb-footer">Footer + Video Link</div>
+        </div>
+      </div>
+
+      <div class="wireframe-wrap">
+        <h3>Desktop View (~1200px)</h3>
+        <div class="wf wf-desktop">
+          <div class="wb wb-header" style="height:44px;">Header + Logo + Horizontal Nav Links</div>
+          <div class="wb wb-hero" style="height:96px;">Full-Width Hero – Flag Colors + Big Three Spotlight</div>
+          <div class="wb wb-gold" style="height:34px;">2026 Tournament Recap – Key Stats Bar</div>
+          <div class="wb-row">
+            <div class="wb wb-card" style="flex:2; height:72px;">Project Intro – Historic Significance of the Squad</div>
+            <div class="wb wb-card" style="flex:1; height:72px;">Quick Stats Panel (HR, AVG, ERA)</div>
+          </div>
+          <div class="wb-row">
+            <div class="wb wb-card" style="flex:1; height:64px;">Big Three Card – Player 1</div>
+            <div class="wb wb-card" style="flex:1; height:64px;">Big Three Card – Player 2</div>
+            <div class="wb wb-card" style="flex:1; height:64px;">Big Three Card – Player 3</div>
+          </div>
+          <div class="wb-row">
+            <div class="wb wb-section" style="flex:1; height:44px;">My Starting Nine – Local Storage CTA</div>
+            <div class="wb wb-section" style="flex:1; height:44px;">Explore Game Day Analytics</div>
+          </div>
+          <div class="wb wb-footer" style="height:34px;">Footer – Attributions | Video Link | Copyright</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="margin-top:1.5rem; font-size:0.88rem; color:#555;">
+      <span class="badge red">Note</span>
+      Wireframes are representational. Player photos, real stats, and final proportions will be defined during development using data from the local JSON file.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 <span>Dominican Power 2026</span> &nbsp;|&nbsp; WDD 231 Individual Website Project</p>
+</footer>
+
+</body>
+</html>
