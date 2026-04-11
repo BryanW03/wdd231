@@ -3,56 +3,56 @@
     "name": "Parque Independencia",
     "address": "Calle Palo Hincado, Zona Colonial, Santo Domingo Oeste",
     "description": "One of the most iconic parks in the Dominican Republic, home to the Altar de la Patria where the founding fathers of the nation rest. A symbol of Dominican identity and independence.",
-    "imageUrl": "images/parque-independencia.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=200&fit=crop&fm=webp&q=80",
     "alt": "Altar de la Patria monument at Parque Independencia"
   },
   {
     "name": "Acuario Nacional",
     "address": "Av. España, Sin Número, Mirador del Este, Santo Domingo Oeste",
     "description": "The National Aquarium features a stunning glass tunnel walk-through where sharks, rays, and tropical fish swim overhead. A favorite family destination showcasing Caribbean marine life.",
-    "imageUrl": "images/acuario-nacional.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=600&h=200&fit=crop&fm=webp&q=80",
     "alt": "Colorful fish and coral inside the National Aquarium tunnel"
   },
   {
     "name": "Parque Mirador del Sur",
     "address": "Av. Cayetano Germosén, Los Restauradores, Santo Domingo Oeste",
     "description": "A sprawling urban park stretching over 7 km along the southern bluff, offering walking trails, cycling paths, and breathtaking views of the Caribbean Sea.",
-    "imageUrl": "images/mirador-sur.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=200&fit=crop&fm=webp&q=80",
     "alt": "Cyclists and walkers enjoying Parque Mirador del Sur"
   },
   {
     "name": "Jardín Botánico Nacional",
     "address": "Av. República de Colombia, Arroyo Manzano, Santo Domingo",
     "description": "One of the largest botanical gardens in Latin America, spanning 2 km². Explore the Japanese garden, orchid house, and thousands of tropical plant species in a peaceful natural setting.",
-    "imageUrl": "images/jardin-botanico.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&h=200&fit=crop&fm=webp&q=80",
     "alt": "Lush tropical plants and flowers at the National Botanical Garden"
   },
   {
     "name": "Estadio Olímpico Félix Sánchez",
     "address": "Av. John F. Kennedy, Villa Olímpica, Santo Domingo",
     "description": "The main athletics stadium of the Dominican Republic, hosting international track and field events. Named after the country's legendary 400-meter hurdles Olympic champion.",
-    "imageUrl": "images/estadio-olimpico.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=600&h=200&fit=crop&fm=webp&q=80",
     "alt": "Exterior view of the Félix Sánchez Olympic Stadium"
   },
   {
     "name": "Centro Olímpico Juan Pablo Duarte",
     "address": "Av. John F. Kennedy, Villa Olímpica, Santo Domingo",
     "description": "A world-class multi-sport complex hosting national and international competitions. Facilities include swimming pools, indoor courts, and a velodrome — the heart of Dominican sports.",
-    "imageUrl": "images/centro-olimpico.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&h=200&fit=crop&fm=webp&q=80",
     "alt": "Aerial view of the Juan Pablo Duarte Olympic Center facilities"
   },
   {
     "name": "Plaza de la Cultura Juan Pablo Duarte",
     "address": "Av. Máximo Gómez esq. Pedro Henríquez Ureña, Gazcue",
     "description": "A cultural complex housing the National Museum of History and Geography, Museum of Modern Art, National Theatre, and the National Library — the cultural soul of Santo Domingo.",
-    "imageUrl": "images/plaza-cultura.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&h=200&fit=crop&fm=webp&q=80",
     "alt": "Plaza de la Cultura with its modernist buildings and green lawns"
   },
   {
     "name": "Parque Zoológico Nacional",
     "address": "Av. de los Proceres de la Independencia s/n, Arroyo Salado",
     "description": "Covering over 800 hectares, the National Zoo is among the largest in the Caribbean. Home to crocodiles, flamingos, manatees, and hundreds of endemic Caribbean species in natural habitats.",
-    "imageUrl": "images/zoologico-nacional.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=600&h=200&fit=crop&fm=webp&q=80",
     "alt": "Flamingos and tropical birds at the National Zoological Park"
   }
 ]

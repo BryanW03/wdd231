@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── BUILD CARDS USING FETCH AND JSON ────────────────────────
   const grid = document.getElementById('discover-grid');
-  
+
   async function getPlacesData() {
     try {
       const response = await fetch('data/discover.json');
@@ -40,18 +40,20 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Failed to fetch places data');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error fetching discover data:', error);
     }
   }
 
   function displayPlaces(places) {
     if (!grid) return;
-    
+
     places.forEach((place, i) => {
+      const areaName = `p${i + 1}`;
+
       const card = document.createElement('article');
       card.className = 'discover-card';
       card.setAttribute('role', 'listitem');
-      card.style.gridArea = `p${i + 1}`;
+      card.style.gridArea = areaName;
 
       card.innerHTML = `
         <figure class="discover-figure">
@@ -61,8 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alt="${place.alt}"
             loading="lazy"
             width="600"
-            height="200"
-            onerror="this.src='https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80&fm=webp'">
+            height="200">
         </figure>
         <div class="discover-body">
           <h3 class="discover-name">${place.name}</h3>
@@ -75,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Ejecutar el fetch al cargar
   getPlacesData();
 
   // ── LEARN MORE BUTTONS ───────────────────────────────────────
