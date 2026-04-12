@@ -1,11 +1,12 @@
 // main.js – Home page module (ES Module)
 import { initNav } from './nav.js';
+import { initScroll } from './scroll.js';
 import { getStartingNine } from './storage.js';
 
 // ── Fetch players for Big Three ───────────────────────────────────────────
 async function fetchBigThree() {
   try {
-    const response = await fetch('./data/players.json');
+    const response = await fetch('./players.json');
     if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
     const players = await response.json();
     return players.filter(p => p.isBigThree);
@@ -60,6 +61,7 @@ function renderLineupStatus() {
 // ── Init ──────────────────────────────────────────────────────────────────
 async function init() {
   initNav();
+  initScroll();
   const bigThree = await fetchBigThree();
   renderBigThree(bigThree);
   renderLineupStatus();

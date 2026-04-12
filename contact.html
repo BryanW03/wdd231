@@ -11,7 +11,6 @@
   <title>Contact – Dominican Power 2026</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚾</text></svg>">
   <link rel="stylesheet" href="main.css">
-  <script type="module" src="nav.js"></script>
 </head>
 <body>
 
@@ -21,7 +20,14 @@
   <header>
     <div class="header-inner">
       <a href="platano_power.html" class="site-brand" aria-label="Dominican Power 2026 Home">
-        <span class="brand-flag" aria-hidden="true">🇩🇴</span>
+        <div class="brand-logo-wrap" aria-hidden="true">
+          <img class="brand-logo-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_the_Dominican_Republic.svg/100px-Flag_of_the_Dominican_Republic.svg.png"
+            alt=""
+            loading="eager"
+            onerror="this.style.display='none'">
+          <span class="brand-logo-fallback">🇩🇴</span>
+        </div>
         <div class="brand-text">
           <span class="brand-name">Dominican Power 2026</span>
           <span class="brand-sub">The Dream Team Journey</span>
@@ -58,7 +64,7 @@
             <p class="section-sub" style="text-align:left">All fields marked with * are required</p>
           </div>
 
-          <form action="form-action.html" method="get" id="contact-form" novalidate>
+          <form action="action.html" method="get" id="contact-form" novalidate>
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="fname">First Name *</label>
@@ -163,8 +169,10 @@
 
   
   <script type="module">
-    import { initNav } from 'nav.js';
+    import { initNav } from './nav.js';
+    import { initScroll } from './scroll.js';
     initNav();
+    initScroll();
   </script>
 </body>
 </html>

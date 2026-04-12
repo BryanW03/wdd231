@@ -1,30 +1,56 @@
-// nav.js – Responsive navigation module (ES Module)
-export function initNav() {
-  const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
+// storage.js – Local Storage utilities (ES Module)
 
-  if (!toggle || !navLinks) return;
+const STORAGE_KEY = 'dp2026_starting_nine';
 
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('is-open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
-  });
+export function getStartingNine() {
+  try {
+    const data = localStorage.getItem(STORAGE_KEY);
+    return data ? JSON.parse(data) : [];
+  } catch {
+    return [];
+  }
+}
 
-  // Close nav when a link is clicked (mobile)
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  });
+export function saveStartingNine(lineup) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(lineup));
+  } catch {
+    console.warn('LocalStorage unavailable');
+  }
+}
 
-  // Wayfinding – mark the current page active
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  navLinks.querySelectorAll('a').forEach(link => {
-    const linkPage = link.getAttribute('href').split('/').pop();
-    if (linkPage === currentPath || (currentPath === '' && linkPage === 'index.html')) {
-      link.classList.add('active');
-      link.setAttribute('aria-current', 'page');
-    }
-  });
+export function addToLineup(player) {
+  const lineup = getStartingNine();
+  if (lineup.length >= 9) return { success: false, reason: 'full' };
+  if (lineup.some(p => p.id === player.id)) return { success: false, reason: 'duplicate' };
+  lineup.push({ id: player.id, name: player.name, position: player.position });
+  saveStartingNine(lineup);
+  return { success: true };
+}
+
+export function removeFromLineup(playerId) {
+  const lineup = getStartingNine().filter(p => p.id !== playerId);
+  saveStartingNine(lineup);
+  return lineup;
+}
+
+export function clearLineup() {
+  saveStartingNine([]);
+}
+
+export function storeValue(key, value) {
+  try {
+    localStorage.setItem(`dp2026_${key}`, JSON.stringify(value));
+  } catch {
+    console.warn('LocalStorage unavailable');
+  }
+}
+
+export function getValue(key, defaultVal = null) {
+  try {
+    const val = localStorage.getItem(`dp2026_${key}`);
+    return val !== null ? JSON.parse(val) : defaultVal;
+  } catch {
+    return defaultVal;
+  }
 }

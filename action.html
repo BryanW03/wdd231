@@ -17,7 +17,14 @@
   <header>
     <div class="header-inner">
       <a href="platano_power.html" class="site-brand" aria-label="Dominican Power 2026 Home">
-        <span class="brand-flag" aria-hidden="true">🇩🇴</span>
+        <div class="brand-logo-wrap" aria-hidden="true">
+          <img class="brand-logo-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_the_Dominican_Republic.svg/100px-Flag_of_the_Dominican_Republic.svg.png"
+            alt=""
+            loading="eager"
+            onerror="this.style.display='none'">
+          <span class="brand-logo-fallback">🇩🇴</span>
+        </div>
         <div class="brand-text">
           <span class="brand-name">Dominican Power 2026</span>
           <span class="brand-sub">The Dream Team Journey</span>
@@ -55,7 +62,7 @@
 
         <div style="text-align:center;margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
           <a href="contact.html" class="btn btn-outline" style="color:var(--blue);border-color:var(--blue)">Submit Another</a>
-          <a href="index.html" class="btn btn-primary">Back to Home</a>
+          <a href="platano_power.html" class="btn btn-primary">Back to Home</a>
         </div>
 
       </div>
@@ -96,8 +103,10 @@
   </footer>
 
   <script type="module">
-    import { initNav } from 'nav.js';
+    import { initNav } from './nav.js';
+    import { initScroll } from './scroll.js';
     initNav();
+    initScroll();
 
     // Display form data from URL Search Params
     const params = new URLSearchParams(window.location.search);

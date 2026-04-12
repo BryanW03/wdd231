@@ -1,11 +1,12 @@
 // roster.js – Player roster module (ES Module)
 import { initNav } from './nav.js';
+import { initScroll } from './scroll.js';
 import { getStartingNine, addToLineup, removeFromLineup, clearLineup } from './storage.js';
 
 // ── Fetch players data ──────────────────────────────────────────────────────
 async function fetchPlayers() {
   try {
-    const response = await fetch('../data/players.json');
+    const response = await fetch('./players.json');
     if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
     const players = await response.json();
     return players;
@@ -232,6 +233,7 @@ function initClearBtn() {
 // ── Init ──────────────────────────────────────────────────────────────────
 async function init() {
   initNav();
+  initScroll();
   const players = await fetchPlayers();
   if (players.length > 0) {
     renderPlayers(players);

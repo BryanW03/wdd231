@@ -1,10 +1,11 @@
 // gameday.js – Game Day Analytics module (ES Module)
 import { initNav } from './nav.js';
+import { initScroll } from './scroll.js';
 
 // ── Fetch games data ──────────────────────────────────────────────────────
 async function fetchGames() {
   try {
-    const response = await fetch('../data/games.json');
+    const response = await fetch('./games.json');
     if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
     const games = await response.json();
     return games;
@@ -196,6 +197,7 @@ function renderTournamentStats(games) {
 // ── Init ──────────────────────────────────────────────────────────────────
 async function init() {
   initNav();
+  initScroll();
   const games = await fetchGames();
   if (games.length > 0) {
     renderGames(games);
