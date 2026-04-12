@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fan tribute submission confirmation – Dominican Power 2026">
+  <meta name="author" content="Bryan W – WDD 231 Individual Project">
+  <title>Tribute Received – Dominican Power 2026</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚾</text></svg>">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="platano_power.html" class="site-brand" aria-label="Dominican Power 2026 Home">
+        <span class="brand-flag" aria-hidden="true">🇩🇴</span>
+        <div class="brand-text">
+          <span class="brand-name">Dominican Power 2026</span>
+          <span class="brand-sub">The Dream Team Journey</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="platano_power.html">Home</a></li>
+          <li><a href="roster.html">2026 Roster</a></li>
+          <li><a href="gameday.html">Game Day</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section section-light" style="min-height:70vh;display:flex;align-items:center" aria-labelledby="confirm-title">
+      <div class="container" style="max-width:700px">
+
+        <div style="text-align:center;margin-bottom:2.5rem">
+          <span style="font-size:3.5rem;display:block;margin-bottom:0.75rem" aria-hidden="true">🇩🇴⚾</span>
+          <h1 style="font-family:'Oswald',sans-serif;font-size:2.2rem;font-weight:700;color:var(--blue);margin-bottom:0.5rem" id="confirm-title">
+            Tribute Received!
+          </h1>
+          <p style="color:var(--text-muted)">Here's a summary of what you submitted. ¡Quisqueya!</p>
+        </div>
+
+        <div id="form-data-display" style="background:var(--white);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);border-top:4px solid var(--red)" aria-live="polite">
+          <p style="color:var(--text-muted);text-align:center">Loading your submission…</p>
+        </div>
+
+        <div style="text-align:center;margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="contact.html" class="btn btn-outline" style="color:var(--blue);border-color:var(--blue)">Submit Another</a>
+          <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand-name">Dominican Power 2026</p>
+          <p class="footer-brand-desc">A fan tribute and data platform celebrating the Dominican Republic's most historic WBC squad.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="roster.html">2026 Roster</a></li>
+            <li><a href="gameday.html">Game Day</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-links">
+            <li><a href="attributions.html">Attributions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Dominican Power 2026 · WDD 231 Individual Project</p>
+        <a href="https://youtu.be/your-video-link" class="footer-video-link" rel="noopener noreferrer">
+          ▶ Watch Project Video
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNav } from 'nav.js';
+    initNav();
+
+    // Display form data from URL Search Params
+    const params = new URLSearchParams(window.location.search);
+    const display = document.querySelector('#form-data-display');
+
+    const fields = [
+      { key: 'fname', label: 'First Name' },
+      { key: 'lname', label: 'Last Name' },
+      { key: 'email', label: 'Email Address' },
+      { key: 'hometown', label: 'Hometown' },
+      { key: 'favorite_player', label: 'Favorite Player' },
+      { key: 'best_moment', label: 'Best WBC Moment' },
+      { key: 'message', label: 'Message' },
+      { key: 'subscribe', label: 'Newsletter Signup' },
+    ];
+
+    const hasData = fields.some(f => params.has(f.key) && params.get(f.key).trim() !== '');
+
+    if (!hasData) {
+      display.innerHTML = `
+        <p style="color:var(--text-muted);text-align:center">
+          No form data found. <a href="contact.html" style="color:var(--red)">Go back and submit the form.</a>
+        </p>
+      `;
+    } else {
+      const rows = fields
+        .filter(f => params.has(f.key) && params.get(f.key).trim() !== '')
+        .map(f => {
+          const val = f.key === 'subscribe'
+            ? (params.get(f.key) === 'yes' ? 'Yes – subscribed' : 'No')
+            : params.get(f.key);
+          return `
+            <div style="display:flex;flex-direction:column;padding:0.75rem 0;border-bottom:1px solid var(--ice)">
+              <span style="font-family:'Oswald',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-muted)">${f.label}</span>
+              <span style="font-size:1rem;color:var(--black);margin-top:0.2rem;word-break:break-word">${val}</span>
+            </div>
+          `;
+        }).join('');
+
+      const name = `${params.get('fname') || ''} ${params.get('lname') || ''}`.trim();
+
+      display.innerHTML = `
+        <p style="font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:700;color:var(--red);margin-bottom:1.25rem">
+          Gracias, ${name || 'Dominican fan'}! Your tribute has been received. 🇩🇴
+        </p>
+        ${rows}
+      `;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The complete 2026 Dominican Republic WBC roster – 16 MLB superstars with full stats, positions, and team info. Build your own Starting Nine with local storage.">
+  <meta name="author" content="Bryan W – WDD 231 Individual Project">
+  <meta property="og:title" content="2026 DR WBC Roster – Dominican Power 2026">
+  <meta property="og:description" content="Explore every player on the 2026 Dominican Republic WBC Dream Team roster with full stats and profiles.">
+  <meta property="og:type" content="website">
+  <title>2026 Roster – Dominican Power 2026</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚾</text></svg>">
+  <link rel="stylesheet" href="main.css">
+  <script type="module" src="roster.js"></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="platano_power.html" class="site-brand" aria-label="Dominican Power 2026 Home">
+        <span class="brand-flag" aria-hidden="true">🇩🇴</span>
+        <div class="brand-text">
+          <span class="brand-name">Dominican Power 2026</span>
+          <span class="brand-sub">The Dream Team Journey</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="platano_power.html">Home</a></li>
+          <li><a href="roster.html">2026 Roster</a></li>
+          <li><a href="gameday.html">Game Day</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" role="banner">
+    <div class="page-hero-content">
+      <h1>The 2026 Roster 🇩🇴</h1>
+      <p>16 MLB superstars united under the Quisqueya flag. Click any player to view full stats and add them to your Starting Nine.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ROSTER SECTION -->
+    <section class="section" aria-labelledby="roster-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="roster-title">Full 2026 WBC Roster</h2>
+          <p class="section-sub">Filter by position · Click a card to see full stats &amp; add to your lineup</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="roster-filters" role="group" aria-label="Filter players by position">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Players</button>
+          <button class="filter-btn" data-filter="pitchers" aria-pressed="false">Pitchers</button>
+          <button class="filter-btn" data-filter="position" aria-pressed="false">Position Players</button>
+        </div>
+
+        <!-- Players Grid -->
+        <div class="players-grid" id="players-grid" aria-live="polite" aria-label="Player roster cards">
+          <p style="text-align:center;color:var(--text-muted);grid-column:1/-1">Loading roster…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STARTING NINE -->
+    <section class="starting-nine-section" aria-labelledby="nine-title">
+      <div class="starting-nine-inner">
+        <div class="starting-nine-header">
+          <h2 class="starting-nine-title" id="nine-title">
+            My Starting Nine
+            <span id="nine-count" style="font-size:0.9rem;color:rgba(255,255,255,0.6);font-weight:400;margin-left:0.5rem" aria-live="polite">0/9</span>
+          </h2>
+          <button class="btn btn-sm btn-outline" id="clear-lineup-btn" aria-label="Clear all players from lineup">Clear Lineup</button>
+        </div>
+        <div class="starting-nine-grid" id="starting-nine-grid" aria-label="Your custom lineup slots">
+          <!-- Rendered by JS -->
+        </div>
+        <p style="color:rgba(255,255,255,0.45);font-size:0.8rem;margin-top:1rem;text-align:center">
+          Your lineup is saved automatically. Come back any time and it'll still be here.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PLAYER MODAL -->
+  <div class="modal-backdrop" id="player-modal" role="dialog" aria-modal="true" aria-labelledby="modal-player-name">
+    <div class="modal" id="modal-content">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand-name">Dominican Power 2026</p>
+          <p class="footer-brand-desc">A fan tribute and data platform celebrating the Dominican Republic's most historic WBC squad. Built with HTML, CSS &amp; JavaScript as a WDD 231 final project.</p>
+          <a href="attributions.html" style="color:var(--gold);font-size:0.875rem">Attributions</a>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="roster.html">2026 Roster</a></li>
+            <li><a href="gameday.html">Game Day</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-links">
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="https://www.wbc2026.com" rel="noopener noreferrer">WBC Official</a></li>
+            <li><a href="https://www.mlb.com" rel="noopener noreferrer">MLB.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Dominican Power 2026 · WDD 231 Individual Project</p>
+        <a href="https://youtu.be/your-video-link" class="footer-video-link" rel="noopener noreferrer" aria-label="Watch project video demonstration">
+          ▶ Watch Project Video
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

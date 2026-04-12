@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Dominican Power 2026 – Share your thoughts on the Dominican Republic's 2026 WBC Dream Team. Submit your fan tribute message.">
+  <meta name="author" content="Bryan W – WDD 231 Individual Project">
+  <meta property="og:title" content="Contact – Dominican Power 2026">
+  <meta property="og:description" content="Send a fan message to Dominican Power 2026.">
+  <meta property="og:type" content="website">
+  <title>Contact – Dominican Power 2026</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚾</text></svg>">
+  <link rel="stylesheet" href="main.css">
+  <script type="module" src="nav.js"></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="platano_power.html" class="site-brand" aria-label="Dominican Power 2026 Home">
+        <span class="brand-flag" aria-hidden="true">🇩🇴</span>
+        <div class="brand-text">
+          <span class="brand-name">Dominican Power 2026</span>
+          <span class="brand-sub">The Dream Team Journey</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="platano_power.html">Home</a></li>
+          <li><a href="roster.html">2026 Roster</a></li>
+          <li><a href="gameday.html">Game Day</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" role="banner">
+    <div class="page-hero-content">
+      <h1>Fan Tribute 🇩🇴</h1>
+      <p>Share your thoughts, memories, and passion for the Dominican Republic's 2026 WBC Dream Team.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="section section-light" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="form-section">
+          <div class="section-header" style="text-align:left;margin-bottom:2rem">
+            <h2 class="section-title" id="contact-title" style="text-align:left">Send Your Message</h2>
+            <p class="section-sub" style="text-align:left">All fields marked with * are required</p>
+          </div>
+
+          <form action="form-action.html" method="get" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fname">First Name *</label>
+                <input class="form-input" type="text" id="fname" name="fname" required autocomplete="given-name" placeholder="Juan">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lname">Last Name *</label>
+                <input class="form-input" type="text" id="lname" name="lname" required autocomplete="family-name" placeholder="Soto">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address *</label>
+              <input class="form-input" type="email" id="email" name="email" required autocomplete="email" placeholder="fan@example.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="hometown">Hometown / Province</label>
+              <input class="form-input" type="text" id="hometown" name="hometown" autocomplete="address-level2" placeholder="Santo Domingo">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="favorite_player">Favorite Player *</label>
+              <select class="form-select" id="favorite_player" name="favorite_player" required>
+                <option value="" disabled selected>Select a player…</option>
+                <option value="Juan Soto">Juan Soto – LF</option>
+                <option value="Julio Rodríguez">Julio Rodríguez – CF</option>
+                <option value="Vladimir Guerrero Jr.">Vladimir Guerrero Jr. – 1B</option>
+                <option value="Sandy Alcántara">Sandy Alcántara – SP</option>
+                <option value="Manny Machado">Manny Machado – 3B</option>
+                <option value="Rafael Devers">Rafael Devers – DH</option>
+                <option value="Wander Franco">Wander Franco – SS</option>
+                <option value="Emmanuel Clase">Emmanuel Clase – RP/Closer</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="best_moment">Best WBC 2026 Moment *</label>
+              <select class="form-select" id="best_moment" name="best_moment" required>
+                <option value="" disabled selected>Select a moment…</option>
+                <option value="Soto Walkoff Semifinal">Soto's Walkoff HR vs USA (Semifinal)</option>
+                <option value="Alcantara Masterpiece Venezuela">Alcántara's 11K masterpiece vs Venezuela</option>
+                <option value="Vlad Grand Slam Cuba">Vlad Jr.'s Grand Slam vs Cuba</option>
+                <option value="Clase Closing Netherlands">Clase's 102mph cutter vs Netherlands</option>
+                <option value="Final vs Japan">The Epic Final vs Japan</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Your Message *</label>
+              <textarea class="form-textarea" id="message" name="message" required placeholder="Share your thoughts, memories, or tribute to the 2026 Dominican Republic Dream Team…" minlength="20"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label style="display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer">
+                <input type="checkbox" name="subscribe" value="yes" style="margin-top:0.3rem;width:18px;height:18px;flex-shrink:0">
+                <span style="font-size:0.9rem;color:var(--text-muted)">I want to receive updates about Dominican baseball and future WBC coverage</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send My Tribute ⚾</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand-name">Dominican Power 2026</p>
+          <p class="footer-brand-desc">A fan tribute and data platform celebrating the Dominican Republic's most historic WBC squad.</p>
+          <a href="attributions.html" style="color:var(--gold);font-size:0.875rem">Attributions</a>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="roster.html">2026 Roster</a></li>
+            <li><a href="gameday.html">Game Day</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-links">
+            <li><a href="attributions.html">Attributions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Dominican Power 2026 · WDD 231 Individual Project</p>
+        <a href="https://youtu.be/your-video-link" class="footer-video-link" rel="noopener noreferrer">
+          ▶ Watch Project Video
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script type="module">
+    import { initNav } from 'nav.js';
+    initNav();
+  </script>
+</body>
+</html>

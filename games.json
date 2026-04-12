@@ -1,0 +1,156 @@
+[
+  {
+    "id": "game1",
+    "opponent": "Puerto Rico",
+    "opponentFlag": "🇵🇷",
+    "date": "March 8, 2026",
+    "result": "W",
+    "score": "7-3",
+    "stage": "Pool Play",
+    "playerOfGame": "Juan Soto",
+    "playerOfGameStat": "3-for-4, 2 HR, 5 RBI",
+    "keyMoment": "Soto's 2-run blast in the 5th inning broke a 3-3 tie and ignited the Dominican Republic to an explosive victory over their Caribbean rivals.",
+    "drRuns": 7,
+    "oppRuns": 3,
+    "summary": "The rivalry with Puerto Rico delivered as expected. After three tense innings, the DR offense exploded with a five-run 5th inning capped by Soto's moonshot to left center.",
+    "boxScore": {
+      "pitchers": [{"name": "Sandy Alcántara", "ip": "7.0", "k": 9, "er": 1}],
+      "topBatters": [
+        {"name": "Juan Soto", "ab": 4, "h": 3, "hr": 2, "rbi": 5},
+        {"name": "Rafael Devers", "ab": 4, "h": 2, "hr": 1, "rbi": 2}
+      ]
+    }
+  },
+  {
+    "id": "game2",
+    "opponent": "Venezuela",
+    "opponentFlag": "🇻🇪",
+    "date": "March 10, 2026",
+    "result": "W",
+    "score": "5-2",
+    "stage": "Pool Play",
+    "playerOfGame": "Sandy Alcántara",
+    "playerOfGameStat": "8 IP, 0 ER, 11 K",
+    "keyMoment": "Alcántara's dominant 8-inning masterpiece, striking out 11 and allowing zero earned runs against a lineup loaded with MLB talent.",
+    "drRuns": 5,
+    "oppRuns": 2,
+    "summary": "Sandy Alcántara put the world on notice with one of the most dominant pitching performances in WBC history, while the offense provided just enough support.",
+    "boxScore": {
+      "pitchers": [{"name": "Sandy Alcántara", "ip": "8.0", "k": 11, "er": 0}],
+      "topBatters": [
+        {"name": "Julio Rodríguez", "ab": 4, "h": 2, "hr": 1, "rbi": 2},
+        {"name": "Manny Machado", "ab": 3, "h": 2, "hr": 0, "rbi": 2}
+      ]
+    }
+  },
+  {
+    "id": "game3",
+    "opponent": "Cuba",
+    "opponentFlag": "🇨🇺",
+    "date": "March 12, 2026",
+    "result": "W",
+    "score": "10-2",
+    "stage": "Pool Play",
+    "playerOfGame": "Vladimir Guerrero Jr.",
+    "playerOfGameStat": "4-for-4, Grand Slam, 6 RBI",
+    "keyMoment": "Guerrero's grand slam in the 4th off the scoreboard was the defining moment of Pool C, sending a message to the entire tournament field.",
+    "drRuns": 10,
+    "oppRuns": 2,
+    "summary": "The most dominant performance of the pool stage. Vlad Jr.'s grand slam was the cherry on top of a game where the DR lineup recorded 15 hits.",
+    "boxScore": {
+      "pitchers": [{"name": "Framber Valdez", "ip": "7.0", "k": 8, "er": 1}],
+      "topBatters": [
+        {"name": "Vladimir Guerrero Jr.", "ab": 4, "h": 4, "hr": 1, "rbi": 6},
+        {"name": "Juan Soto", "ab": 4, "h": 3, "hr": 0, "rbi": 2}
+      ]
+    }
+  },
+  {
+    "id": "game4",
+    "opponent": "Netherlands",
+    "opponentFlag": "🇳🇱",
+    "date": "March 16, 2026",
+    "result": "W",
+    "score": "6-4",
+    "stage": "Super Round",
+    "playerOfGame": "Emmanuel Clase",
+    "playerOfGameStat": "2 IP, 0 H, 3 K, Save",
+    "keyMoment": "Clase's two perfect innings to close out the game, recording three strikeouts with four pitches touching 102 mph.",
+    "drRuns": 6,
+    "oppRuns": 4,
+    "summary": "A tighter contest than expected from a Dutch side that boasts many MLB stars. The DR held on thanks to a late Devers RBI single and Clase's shutdown closing.",
+    "boxScore": {
+      "pitchers": [{"name": "Cristian Javier", "ip": "6.0", "k": 8, "er": 3}, {"name": "Emmanuel Clase", "ip": "2.0", "k": 3, "er": 0}],
+      "topBatters": [
+        {"name": "Rafael Devers", "ab": 4, "h": 2, "hr": 0, "rbi": 3},
+        {"name": "Wander Franco", "ab": 4, "h": 3, "hr": 0, "rbi": 1}
+      ]
+    }
+  },
+  {
+    "id": "game5",
+    "opponent": "Japan",
+    "opponentFlag": "🇯🇵",
+    "date": "March 18, 2026",
+    "result": "L",
+    "score": "3-5",
+    "stage": "Super Round",
+    "playerOfGame": "Julio Rodríguez",
+    "playerOfGameStat": "2-for-3, HR, 2 RBI",
+    "keyMoment": "Despite Julio Rodríguez's electrifying leadoff homer, Japan's Yoshida tied the game in the 8th and their bullpen held the lead through nine.",
+    "drRuns": 3,
+    "oppRuns": 5,
+    "summary": "The clash of the tournament. Both teams played at championship level, but Japan's depth in the bullpen proved the difference in an epic contest under the Marlins' Stadium lights.",
+    "boxScore": {
+      "pitchers": [{"name": "Sandy Alcántara", "ip": "6.0", "k": 7, "er": 3}],
+      "topBatters": [
+        {"name": "Julio Rodríguez", "ab": 3, "h": 2, "hr": 1, "rbi": 2},
+        {"name": "Juan Soto", "ab": 4, "h": 1, "hr": 0, "rbi": 1}
+      ]
+    }
+  },
+  {
+    "id": "game6",
+    "opponent": "USA",
+    "opponentFlag": "🇺🇸",
+    "date": "March 20, 2026",
+    "result": "W",
+    "score": "8-5",
+    "stage": "Semifinal",
+    "playerOfGame": "Juan Soto",
+    "playerOfGameStat": "4-for-5, 2 HR, 4 RBI",
+    "keyMoment": "Soto's walk-off 3-run homer in the 9th inning off the USA's closer, sending the Dominican Republic to the WBC Final with an eruption at loanDepot park.",
+    "drRuns": 8,
+    "oppRuns": 5,
+    "summary": "The greatest Dominican Republic WBC performance ever. With the DR trailing 5-4 in the 9th, Soto crushed a three-run walkoff that will be replayed forever in Dominican sports history.",
+    "boxScore": {
+      "pitchers": [{"name": "Framber Valdez", "ip": "5.2", "k": 6, "er": 3}, {"name": "Emmanuel Clase", "ip": "2.1", "k": 4, "er": 0}],
+      "topBatters": [
+        {"name": "Juan Soto", "ab": 5, "h": 4, "hr": 2, "rbi": 4},
+        {"name": "Vladimir Guerrero Jr.", "ab": 4, "h": 3, "hr": 1, "rbi": 3}
+      ]
+    }
+  },
+  {
+    "id": "game7",
+    "opponent": "Japan",
+    "opponentFlag": "🇯🇵",
+    "date": "March 22, 2026",
+    "result": "L",
+    "score": "4-6",
+    "stage": "Final",
+    "playerOfGame": "Rafael Devers",
+    "playerOfGameStat": "3-for-4, HR, 3 RBI",
+    "keyMoment": "Devers's 2-run blast in the 7th brought the DR within one, but Japan's Ohtani returned from the pen in the 8th to seal the championship.",
+    "drRuns": 4,
+    "oppRuns": 6,
+    "summary": "A heartbreaking Final against Japan, but one that cemented the 2026 DR squad as the greatest team to never win the WBC. They lost the battle but won the hearts of the world.",
+    "boxScore": {
+      "pitchers": [{"name": "Sandy Alcántara", "ip": "6.0", "k": 8, "er": 4}],
+      "topBatters": [
+        {"name": "Rafael Devers", "ab": 4, "h": 3, "hr": 1, "rbi": 3},
+        {"name": "Juan Soto", "ab": 4, "h": 2, "hr": 0, "rbi": 1}
+      ]
+    }
+  }
+]

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Game Day Analytics for the 2026 Dominican Republic WBC campaign. Full box scores, Player of the Game, and key turning points for all 7 games including the epic USA semifinal.">
+  <meta name="author" content="Bryan W – WDD 231 Individual Project">
+  <meta property="og:title" content="Game Day Analytics – Dominican Power 2026">
+  <meta property="og:description" content="Explore every game from the Dominican Republic's 2026 WBC run — box scores, player of the game, and match summaries.">
+  <meta property="og:type" content="website">
+  <title>Game Day Analytics – Dominican Power 2026</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚾</text></svg>">
+  <link rel="stylesheet" href="main.css">
+  <script type="module" src="gameday.js"></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="platano_power.html" class="site-brand" aria-label="Dominican Power 2026 Home">
+        <span class="brand-flag" aria-hidden="true">🇩🇴</span>
+        <div class="brand-text">
+          <span class="brand-name">Dominican Power 2026</span>
+          <span class="brand-sub">The Dream Team Journey</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="platano_power.html">Home</a></li>
+          <li><a href="roster.html">2026 Roster</a></li>
+          <li><a href="gameday.html">Game Day</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" role="banner">
+    <div class="page-hero-content">
+      <h1>Game Day Analytics ⚾</h1>
+      <p>Every matchup, every big moment, every box score from the Dominican Republic's 2026 WBC run. Click any game card for full details.</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- TOURNAMENT STATS -->
+    <section class="section section-light" aria-labelledby="tournament-stats-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="tournament-stats-title">Tournament Overview</h2>
+          <p class="section-sub">The Dominican Republic's complete 2026 WBC performance at a glance</p>
+        </div>
+        <div class="about-facts" id="tournament-stats" aria-live="polite" aria-label="Tournament statistics"
+          style="max-width:700px;margin:0 auto;grid-template-columns:repeat(2,1fr)">
+          <p style="text-align:center;color:var(--text-muted);grid-column:1/-1">Loading stats…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAMES GRID -->
+    <section class="section" aria-labelledby="games-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="games-title">All 7 Games</h2>
+          <p class="section-sub">From Pool Play through the Final — click any card to open the full box score</p>
+        </div>
+        <div class="games-grid" id="games-grid" aria-live="polite" aria-label="Game cards">
+          <p style="text-align:center;color:var(--text-muted);grid-column:1/-1">Loading games…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NARRATIVE SECTION -->
+    <section class="section section-dark" aria-labelledby="narrative-title">
+      <div class="container" style="max-width:800px">
+        <div class="section-header">
+          <h2 class="section-title" id="narrative-title">The Journey</h2>
+          <p class="section-sub">From the first pitch to the final out</p>
+        </div>
+        <div style="color:rgba(255,255,255,0.8);line-height:1.8;font-size:1rem">
+          <p style="margin-bottom:1.25rem">The Dominican Republic entered the 2026 WBC with the most anticipated roster the tournament had ever seen. Pundits called them "unbeatable." Fans called them "destiny." And for six games, they lived up to every expectation.</p>
+          <p style="margin-bottom:1.25rem">The Pool Play stage was a statement. A 10-2 demolition of Cuba, an 8-inning masterpiece from Sandy Alcántara against Venezuela, and an electrifying performance from Juan Soto against Puerto Rico. The Super Round brought a tight win over the Netherlands and a gut-punch defeat to Japan that proved the road to the championship would be hard.</p>
+          <p style="margin-bottom:1.25rem">Then came the Semifinal against the United States. Trailing in the 9th, Juan Soto stepped into the batter's box. What followed — a three-run walkoff homer — became the defining image of Dominican baseball in 2026. The nation stopped. The streets erupted.</p>
+          <p>The Final against Japan was an epic worthy of the occasion. A lead lost, a furious comeback, and a heartbreaking last out. But the 2026 Dominican Republic WBC team will forever be remembered not for falling short, but for how they made everyone believe — including themselves.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GAME MODAL -->
+  <div class="modal-backdrop" id="game-modal" role="dialog" aria-modal="true" aria-labelledby="game-modal-title">
+    <div class="modal" id="game-modal-content">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand-name">Dominican Power 2026</p>
+          <p class="footer-brand-desc">A fan tribute and data platform celebrating the Dominican Republic's most historic WBC squad. Built with HTML, CSS &amp; JavaScript as a WDD 231 final project.</p>
+          <a href="attributions.html" style="color:var(--gold);font-size:0.875rem">Attributions</a>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="roster.html">2026 Roster</a></li>
+            <li><a href="gameday.html">Game Day</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-links">
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="https://www.wbc2026.com" rel="noopener noreferrer">WBC Official</a></li>
+            <li><a href="https://www.mlb.com" rel="noopener noreferrer">MLB.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Dominican Power 2026 · WDD 231 Individual Project</p>
+        <a href="https://youtu.be/your-video-link" class="footer-video-link" rel="noopener noreferrer" aria-label="Watch project video demonstration">
+          ▶ Watch Project Video
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>
